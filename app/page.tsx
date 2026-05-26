@@ -21,6 +21,16 @@ const products = [
   "B0FT6Q7PVJ",
   "B0FMPTFWC7",
   "B0FB8RLT7R",
+  "B0FP2G28NC",
+  "B0FRMKQ6WP",
+  "B0FBK1LWBZ",
+  "B0FQCHHWD5",
+  "B0FNR6DDL9",
+  "B0FLJFTPZG",
+  "B0FK9SYH6W",
+  "B0FNDBSH2B",
+  "B0GYYPLVF2",
+  "B0GYZDZT9T",
 ];
 
 export default function HomePage() {
