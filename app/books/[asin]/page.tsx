@@ -16,23 +16,20 @@ export default async function BookPage({
 
   return (
     <main className="min-h-screen bg-orange-50 px-6 py-12">
-      <div className="mx-auto max-w-4xl">
-        <Link
-          href="/halloween-coloring-books"
-          className="text-sm underline"
-        >
+      <div className="mx-auto max-w-5xl">
+        <Link href="/" className="text-sm underline">
           ← Back
         </Link>
 
         <div className="mt-8 grid gap-10 md:grid-cols-2">
           <img
-            src={`/covers/${book.asin}.png`}
+            src={`/covers/${book.asin}.jpg`}
             alt={book.title}
-            className="w-full rounded-3xl shadow-lg"
+            className="aspect-square w-full rounded-3xl object-cover shadow-lg"
           />
 
           <div>
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-4xl font-bold leading-tight">
               {book.title}
             </h1>
 
@@ -40,9 +37,10 @@ export default async function BookPage({
               ASIN: {book.asin}
             </p>
 
-            <p className="mt-6 text-lg text-zinc-700">
-              Cute, cozy, spooky Halloween coloring fun for
-              kids, teens, and adults.
+            <p className="mt-8 text-lg leading-8 text-zinc-700">
+              {book.title} is a cute and spooky Halloween coloring book pick
+              for kids, teens, adults, cozy autumn activities, seasonal gifts,
+              relaxation, and screen-free creative fun.
             </p>
 
             <a
