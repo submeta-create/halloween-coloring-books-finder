@@ -1,29 +1,29 @@
-import { products } from "./data/products";
+import { MetadataRoute } from "next";
 
-export default function sitemap() {
-  const baseUrl = "https://halloween-coloring-books-finder.vercel.app";
+const baseUrl = "https://www.cozyhalloweenbooks.com";
 
-  const productPages = products.map((book) => ({
-    url: `${baseUrl}/books/${book.asin}`,
-    lastModified: new Date(),
-  }));
-
-  const categoryPages = [
-    "cute-halloween",
-    "cozy-spooky",
-    "ghost-coloring-books",
-    "bold-easy",
-  ].map((slug) => ({
-    url: `${baseUrl}/categories/${slug}`,
-    lastModified: new Date(),
-  }));
-
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
     },
-    ...categoryPages,
-    ...productPages,
+
+    {
+      url: `${baseUrl}/categories/cute-halloween`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/categories/cozy-spooky`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/categories/ghost-coloring-books`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/categories/bold-easy`,
+      lastModified: new Date(),
+    },
   ];
 }
