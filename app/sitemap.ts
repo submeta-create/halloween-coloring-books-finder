@@ -8,11 +8,22 @@ export default function sitemap() {
     lastModified: new Date(),
   }));
 
+  const categoryPages = [
+    "cute-halloween",
+    "cozy-spooky",
+    "ghost-coloring-books",
+    "bold-easy",
+  ].map((slug) => ({
+    url: `${baseUrl}/categories/${slug}`,
+    lastModified: new Date(),
+  }));
+
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
     },
+    ...categoryPages,
     ...productPages,
   ];
 }
