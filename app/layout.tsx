@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cozyhalloweenbooks.com"),
   title: "Cozy Halloween Coloring Books",
   description:
-    "Cute, spooky and cozy coloring books for kids, teens and adults.",
-
+    "Cute, spooky and cozy Halloween coloring books for kids, teens and adults.",
   openGraph: {
     title: "Cozy Halloween Coloring Books",
     description:
-      "Cute, spooky and cozy coloring books for kids, teens and adults.",
-    url: "https://halloween-coloring-books-finder.vercel.app",
-    siteName: "Ella Tarling",
+      "Cute, spooky and cozy Halloween coloring books for kids, teens and adults.",
+    url: "https://cozyhalloweenbooks.com",
+    siteName: "Cozy Halloween Books",
     images: [
       {
         url: "/og-image.jpg",
@@ -23,24 +24,26 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Cozy Halloween Coloring Books",
     description:
-      "Cute, spooky and cozy coloring books for kids, teens and adults.",
+      "Cute, spooky and cozy Halloween coloring books for kids, teens and adults.",
     images: ["/og-image.jpg"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
