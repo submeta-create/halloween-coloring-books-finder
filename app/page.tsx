@@ -1,85 +1,135 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-const products = [
-  "B0F5GXK4ZZ",
-  "B0FGP9HQ24",
-  "B0FKNDH6VD",
-  "B0F6KDB4X1",
-  "B0F7X8W5J3",
-  "B0FJ5HTSYG",
-  "B0F6CMKL6K",
-  "B0F87HTSXR",
-  "B0FC2HL9PN",
-  "B0FC69CCRF",
-  "B0H1N6HD2P",
-  "B0H1N981H3",
-  "B0FMPXV23H",
-  "B0FBFT2GVR",
-  "B0FRXTXL9Y",
-  "B0GZNZ1GT8",
-  "B0FT6Q7PVJ",
-  "B0FMPTFWC7",
-  "B0FB8RLT7R",
-  "B0FP2G28NC",
-  "B0FRMKQ6WP",
-  "B0FBK1LWBZ",
-  "B0FQCHHWD5",
-  "B0FNR6DDL9",
-  "B0FLJFTPZG",
-  "B0FK9SYH6W",
-  "B0FNDBSH2B",
-  "B0GYYPLVF2",
-  "B0GYZDZT9T",
-];
+import { products } from "./data/products";
 
 export default function HomePage() {
+  const [search, setSearch] = useState("");
+
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <main className="min-h-screen bg-[#f5efe6] px-6 py-16">
-      <header className="mx-auto mb-14 max-w-4xl text-center">
-        <h1 className="mb-4 text-5xl font-bold text-black">
+      <header className="mx-auto mb-14 max-w-7xl">
+        <h1 className="mb-6 text-5xl font-bold text-black">
           Halloween Coloring Books
         </h1>
 
-        <p className="mx-auto max-w-2xl text-lg text-gray-600">
-          Discover cute, spooky, cozy, and fun Halloween coloring books.
+        <p className="max-w-3xl text-lg text-gray-600">
+          Discover cute, spooky, cozy, and relaxing Halloween coloring books
+          for kids, teens, and adults.
         </p>
+
+        <div className="mt-8">
+          <input
+            type="text"
+            placeholder="Search spooky books..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full max-w-xl rounded-2xl border border-gray-300 bg-white px-6 py-4 text-lg outline-none transition focus:border-black"
+          />
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <button className="rounded-full bg-black px-5 py-2 text-white">
+            Cute Halloween
+          </button>
+
+          <button className="rounded-full bg-black px-5 py-2 text-white">
+            Cozy Coloring
+          </button>
+
+          <button className="rounded-full bg-black px-5 py-2 text-white">
+            Ghosts & Pumpkins
+          </button>
+
+          <button className="rounded-full bg-black px-5 py-2 text-white">
+            Bold & Easy
+          </button>
+        </div>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-3xl bg-white p-6 shadow-sm">
+            <div className="text-5xl font-bold">
+              {products.length}
+            </div>
+
+            <div className="mt-2 text-gray-500">
+              Halloween Books
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-6 shadow-sm">
+            <div className="text-5xl font-bold">
+              Kids
+            </div>
+
+            <div className="mt-2 text-gray-500">
+              Fun Coloring Pages
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-6 shadow-sm">
+            <div className="text-5xl font-bold">
+              Teens
+            </div>
+
+            <div className="mt-2 text-gray-500">
+              Cozy & Spooky Art
+            </div>
+          </div>
+
+          <div className="rounded-3xl bg-white p-6 shadow-sm">
+            <div className="text-5xl font-bold">
+              Adults
+            </div>
+
+            <div className="mt-2 text-gray-500">
+              Relaxing Coloring
+            </div>
+          </div>
+        </div>
       </header>
 
       <div className="mx-auto grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {products.map((asin) => (
+        {filteredProducts.map((product) => (
           <div
-            key={asin}
-            className="rounded-3xl border border-gray-300 bg-white p-6 shadow-sm transition hover:shadow-lg"
+            key={product.asin}
+            className="rounded-3xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="relative mb-6 aspect-square overflow-hidden rounded-2xl">
+            <div className="relative mb-5 aspect-square overflow-hidden rounded-2xl">
               <Image
-                src={`/covers/${asin}.jpg`}
-                alt={asin}
+                src={`/covers/${product.asin}.jpg`}
+                alt={product.title}
                 fill
                 className="object-cover"
               />
             </div>
 
             <h2 className="mb-3 text-2xl font-bold leading-tight text-black">
-              Halloween Coloring Book
+              {product.title}
             </h2>
 
-            <p className="mb-6 text-gray-500">ASIN: {asin}</p>
+            <p className="mb-6 text-gray-500">
+              ASIN: {product.asin}
+            </p>
 
             <div className="flex gap-3">
               <a
-                href={`https://www.amazon.com/dp/${asin}`}
+                href={`https://www.amazon.com/dp/${product.asin}`}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
+                className="rounded-2xl bg-black px-5 py-3 font-semibold text-white"
               >
-                View on Amazon
+                Amazon
               </a>
 
               <Link
-                href={`/halloween-coloring-books/${asin}`}
-                className="rounded-xl border border-gray-300 px-5 py-3 text-sm font-semibold text-black transition hover:bg-gray-100"
+                href={`/books/${product.asin}`}
+                className="rounded-2xl border border-gray-300 px-5 py-3 font-semibold"
               >
                 Details
               </Link>
