@@ -22,31 +22,19 @@ export default function HomePage() {
           />
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/categories/cute-halloween"
-              className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
-            >
+            <Link href="/categories/cute-halloween" className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white">
               Cute Halloween
             </Link>
 
-            <Link
-              href="/categories/cute-halloween"
-              className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
-            >
+            <Link href="/categories/cozy-spooky" className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white">
               Cozy Coloring
             </Link>
 
-            <Link
-              href="/categories/cute-halloween"
-              className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
-            >
+            <Link href="/categories/ghost-coloring-books" className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white">
               Ghosts & Pumpkins
             </Link>
 
-            <Link
-              href="/categories/cute-halloween"
-              className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
-            >
+            <Link href="/categories/bold-easy" className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white">
               Bold & Easy
             </Link>
           </div>
@@ -55,30 +43,22 @@ export default function HomePage() {
         <section className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-3xl bg-white p-8 shadow-sm">
             <h2 className="text-6xl font-black">{products.length}</h2>
-            <p className="mt-3 text-2xl text-zinc-500">
-              Halloween Books
-            </p>
+            <p className="mt-3 text-2xl text-zinc-500">Halloween Books</p>
           </div>
 
           <div className="rounded-3xl bg-white p-8 shadow-sm">
             <h2 className="text-5xl font-black">Kids</h2>
-            <p className="mt-3 text-2xl text-zinc-500">
-              Fun Coloring Pages
-            </p>
+            <p className="mt-3 text-2xl text-zinc-500">Fun Coloring Pages</p>
           </div>
 
           <div className="rounded-3xl bg-white p-8 shadow-sm">
             <h2 className="text-5xl font-black">Teens</h2>
-            <p className="mt-3 text-2xl text-zinc-500">
-              Cozy & Spooky Art
-            </p>
+            <p className="mt-3 text-2xl text-zinc-500">Cozy & Spooky Art</p>
           </div>
 
           <div className="rounded-3xl bg-white p-8 shadow-sm">
             <h2 className="text-5xl font-black">Adults</h2>
-            <p className="mt-3 text-2xl text-zinc-500">
-              Relaxing Coloring
-            </p>
+            <p className="mt-3 text-2xl text-zinc-500">Relaxing Coloring</p>
           </div>
         </section>
 
@@ -100,9 +80,7 @@ export default function HomePage() {
                 {book.title}
               </h2>
 
-              <p className="mt-3 text-zinc-500">
-                ASIN: {book.asin}
-              </p>
+              <p className="mt-3 text-zinc-500">ASIN: {book.asin}</p>
 
               <div className="mt-6 flex gap-3">
                 <a
