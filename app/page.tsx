@@ -36,15 +36,12 @@ export default function HomePage() {
             <Link href="/categories/cute-halloween" className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white">
               Cute Halloween
             </Link>
-
             <Link href="/categories/cozy-spooky" className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white">
               Cozy Coloring
             </Link>
-
             <Link href="/categories/ghost-coloring-books" className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white">
               Ghosts & Pumpkins
             </Link>
-
             <Link href="/categories/bold-easy" className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white">
               Bold & Easy
             </Link>
@@ -56,17 +53,14 @@ export default function HomePage() {
             <h2 className="text-6xl font-black">{products.length}</h2>
             <p className="mt-3 text-2xl text-zinc-500">Halloween Books</p>
           </div>
-
           <div className="rounded-3xl bg-white p-8 shadow-sm">
             <h2 className="text-5xl font-black">Kids</h2>
             <p className="mt-3 text-2xl text-zinc-500">Fun Coloring Pages</p>
           </div>
-
           <div className="rounded-3xl bg-white p-8 shadow-sm">
             <h2 className="text-5xl font-black">Teens</h2>
             <p className="mt-3 text-2xl text-zinc-500">Cozy & Spooky Art</p>
           </div>
-
           <div className="rounded-3xl bg-white p-8 shadow-sm">
             <h2 className="text-5xl font-black">Adults</h2>
             <p className="mt-3 text-2xl text-zinc-500">Relaxing Coloring</p>
@@ -77,7 +71,7 @@ export default function HomePage() {
           {filteredProducts.map((book) => (
             <div
               key={book.asin}
-              className="rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="flex flex-col rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
               <Link href={`/books/${book.asin}`}>
                 <img
@@ -87,13 +81,13 @@ export default function HomePage() {
                 />
               </Link>
 
-              <h2 className="mt-5 line-clamp-3 text-2xl font-black leading-tight">
+              <h2 className="mt-5 line-clamp-3 min-h-[96px] text-2xl font-black leading-tight">
                 {book.title}
               </h2>
 
               <p className="mt-3 text-zinc-500">ASIN: {book.asin}</p>
 
-              <div className="mt-6 flex gap-3">
+              <div className="mt-auto flex gap-3 pt-6">
                 <a
                   href={`https://www.amazon.com/dp/${book.asin}`}
                   target="_blank"
