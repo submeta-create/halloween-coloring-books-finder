@@ -1,7 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { products } from "@/app/data/products";
 
 export default function HomePage() {
+  const [search, setSearch] = useState("");
+
+  const filteredProducts = products.filter((book) =>
+    book.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <main className="min-h-screen bg-[#f5efe6] px-6 py-12">
       <div className="mx-auto max-w-7xl">
@@ -18,6 +27,8 @@ export default function HomePage() {
           <input
             type="text"
             placeholder="Search spooky books..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
             className="mt-10 w-full max-w-2xl rounded-2xl border border-zinc-300 bg-white px-6 py-5 text-lg outline-none"
           />
 
@@ -63,7 +74,7 @@ export default function HomePage() {
         </section>
 
         <section className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((book) => (
+          {filteredProducts.map((book) => (
             <div
               key={book.asin}
               className="rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
