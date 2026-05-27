@@ -1,29 +1,24 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Halloween Coloring Books | Cute, Cozy & Spooky Books",
+  title: "Halloween Coloring Books",
   description:
-    "Discover cute, cozy, spooky, and bold Halloween coloring books for kids, teens, and adults.",
-  keywords: [
-    "Halloween coloring books",
-    "cute Halloween coloring book",
-    "spooky coloring books",
-    "cozy Halloween books",
-    "Halloween gifts",
-    "coloring books for adults",
-    "coloring books for kids",
-  ],
+    "Discover cute, cozy, spooky, and relaxing Halloween coloring books for kids, teens, and adults.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
