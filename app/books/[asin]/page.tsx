@@ -18,13 +18,34 @@ export default async function BookPage({
     .slice(0, 4);
 
   return (
-    <main className="min-h-screen bg-[#f5efe6] px-6 py-12">
+    <main className="min-h-screen bg-[#f5efe6] px-6 py-8">
       <div className="mx-auto max-w-6xl">
-        <Link href="/" className="text-sm font-semibold underline">
-          ← Back to all Halloween books
-        </Link>
+        <nav className="sticky top-0 z-20 mb-8 flex flex-wrap items-center gap-3 bg-[#f5efe6]/90 py-4 backdrop-blur">
+          <Link
+            href="/"
+            className="rounded-full bg-white px-5 py-3 text-sm font-bold shadow-sm hover:bg-zinc-100"
+          >
+            ← All Books
+          </Link>
 
-        <section className="mt-10 grid gap-10 md:grid-cols-2">
+          <Link
+            href="/"
+            className="rounded-full bg-white px-5 py-3 text-sm font-bold shadow-sm hover:bg-zinc-100"
+          >
+            Home
+          </Link>
+
+          <a
+            href={`https://www.amazon.com/dp/${book.asin}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
+          >
+            Amazon
+          </a>
+        </nav>
+
+        <section className="grid gap-10 md:grid-cols-2">
           <img
             src={`/covers/${book.asin}.jpg`}
             alt={book.title}
@@ -98,6 +119,15 @@ export default async function BookPage({
             ))}
           </div>
         </section>
+
+        <div className="mt-14 text-center">
+          <Link
+            href="/"
+            className="inline-block rounded-2xl bg-black px-8 py-4 font-bold text-white"
+          >
+            Back to all Halloween books
+          </Link>
+        </div>
       </div>
     </main>
   );
