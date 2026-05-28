@@ -101,7 +101,57 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-16">
+        <section className="mt-20">
+          <h2 className="text-4xl font-black text-black">
+            Featured Halloween Coloring Books
+          </h2>
+
+          <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {filteredProducts.map((book) => (
+              <div
+                key={book.asin}
+                className="flex min-h-[520px] flex-col rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <Link href={`/books/${book.asin}`}>
+                  <Image
+                    src={`/covers/${book.asin}.jpg`}
+                    alt={book.title}
+                    width={800}
+                    height={800}
+                    loading="lazy"
+                    className="aspect-square w-full rounded-2xl object-cover"
+                  />
+                </Link>
+
+                <h2 className="mt-5 line-clamp-3 text-2xl font-black leading-tight">
+                  {book.title}
+                </h2>
+
+                <p className="mt-3 text-zinc-500">
+                  ASIN: {book.asin}
+                </p>
+
+                <div className="mt-auto flex gap-3 pt-6">
+                  <a
+                    href={`/go/${book.asin}`}
+                    className="rounded-2xl bg-black px-5 py-3 font-semibold text-white"
+                  >
+                    Amazon
+                  </a>
+
+                  <Link
+                    href={`/books/${book.asin}`}
+                    className="rounded-2xl border border-zinc-300 px-5 py-3 font-semibold"
+                  >
+                    Details
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-20">
           <h2 className="text-4xl font-black text-black">
             Halloween Coloring Book Guides
           </h2>
@@ -122,50 +172,6 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </section>
-
-        <section className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {filteredProducts.map((book) => (
-            <div
-              key={book.asin}
-              className="flex min-h-[520px] flex-col rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <Link href={`/books/${book.asin}`}>
-                <Image
-                  src={`/covers/${book.asin}.jpg`}
-                  alt={book.title}
-                  width={800}
-                  height={800}
-                  loading="lazy"
-                  className="aspect-square w-full rounded-2xl object-cover"
-                />
-              </Link>
-
-              <h2 className="mt-5 line-clamp-3 text-2xl font-black leading-tight">
-                {book.title}
-              </h2>
-
-              <p className="mt-3 text-zinc-500">
-                ASIN: {book.asin}
-              </p>
-
-              <div className="mt-auto pt-6 flex gap-3">
-                <a
-                  href={`/go/${book.asin}`}
-                  className="rounded-2xl bg-black px-5 py-3 font-semibold text-white"
-                >
-                  Amazon
-                </a>
-
-                <Link
-                  href={`/books/${book.asin}`}
-                  className="rounded-2xl border border-zinc-300 px-5 py-3 font-semibold"
-                >
-                  Details
-                </Link>
-              </div>
-            </div>
-          ))}
         </section>
       </div>
     </main>
