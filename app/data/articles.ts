@@ -840,6 +840,136 @@ export const articles: SeoArticle[] = [
       },
     ],
   },
+  {
+    slug: "witch-coloring-books",
+    title: "Witch Coloring Books",
+    description:
+      "A curated guide to witch coloring books with cute Halloween scenes, cozy spooky artwork, pumpkins, cats, hats, potions, and seasonal book picks.",
+    intro:
+      "Witch coloring books are a classic Halloween theme because they can feel playful, cozy, magical, or gently spooky. A good witch coloring book may include pointy hats, pumpkins, black cats, bubbling cauldrons, moonlit scenes, candy, cozy rooms, and friendly characters that work for kids, teens, and adults. This guide focuses on existing Halloween coloring book picks with witch-friendly and cozy spooky themes, using internal links to related book pages and categories so readers can browse from broad seasonal ideas into specific books. It avoids copied reviews or ratings and keeps the focus on useful book discovery, activity ideas, and seasonal gift inspiration.",
+    bestFor: [
+      "Readers who like cute witch and magical Halloween themes",
+      "Halloween baskets, fall activities, and cozy spooky gifts",
+      "Kids, teens, and adults who prefer friendly seasonal artwork",
+    ],
+    featuredAsins: ["B0FBFT2GVR", "B0FK9SYH6W", "B0F7X8W5J3", "B0F5GXK4ZZ"],
+    pinterest: {
+      titles: [
+        "Witch Coloring Books for Halloween",
+        "Cute Witch Coloring Book Ideas",
+        "Cozy Spooky Witch Coloring Pages",
+      ],
+      descriptions: [
+        "A witch coloring book guide with cute Halloween scenes, pumpkins, cats, hats, potions, and cozy spooky book picks.",
+        "Save these witch coloring book ideas for Halloween baskets, fall activities, and relaxing October coloring.",
+        "Explore friendly witch-themed coloring books for kids, teens, adults, and cozy spooky coloring fans.",
+      ],
+      keywords: [
+        "witch coloring books",
+        "cute witch coloring pages",
+        "Halloween witch coloring",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Cute Halloween Coloring Books",
+        href: "/cute-halloween-coloring-books",
+        description: "Friendly spooky books with cute seasonal artwork.",
+      },
+      {
+        label: "Cozy Spooky Coloring Books",
+        href: "/cozy-spooky-coloring-books",
+        description: "Soft spooky books for relaxing Halloween coloring.",
+      },
+      {
+        label: "Tiny Witch World Coloring Book",
+        href: "/books/B0FBFT2GVR",
+        description: "A witch-themed Halloween coloring book pick.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Are witch coloring books only for older kids or adults?",
+        answer:
+          "No. Many witch coloring books use friendly, cute, or cozy Halloween artwork that can work for kids, teens, and adults depending on the page complexity.",
+      },
+      {
+        question: "What themes appear in witch coloring books?",
+        answer:
+          "Common themes include witch hats, pumpkins, cats, potions, bats, moonlit skies, cozy rooms, candy, and playful spooky characters.",
+      },
+      {
+        question: "Do these guide pages use fake ratings?",
+        answer:
+          "No. Cozy Halloween Books does not add fake ratings, copied reviews, or manual review counts.",
+      },
+    ],
+  },
+  {
+    slug: "halloween-activity-books",
+    title: "Halloween Activity Books",
+    description:
+      "A coloring-focused guide to Halloween activity books for kids, families, gifts, classroom activities, baskets, and cozy October creative time.",
+    intro:
+      "Halloween activity books can make October feel more creative without requiring screens, complex supplies, or a big setup. Coloring-focused activity books are especially useful for kids, families, classrooms, party favors, Halloween baskets, and cozy fall weekends at home. The books in this guide connect to existing Halloween coloring book pages with friendly ghosts, pumpkins, witches, spooky animals, bold easy pages, and cozy autumn themes. Some are better for younger kids and beginners, while others can also work for teens and adults who want relaxing seasonal coloring. Use this hub as a starting point for activity ideas, gift inspiration, and quick internal links to related Halloween coloring book pages.",
+    bestFor: [
+      "Kids and families looking for screen-free Halloween activities",
+      "Classroom treats, party favors, and Halloween baskets",
+      "Relaxed October coloring time with simple seasonal themes",
+    ],
+    featuredAsins: ["B0FGP9HQ24", "B0FK9SYH6W", "B0F7X8W5J3", "B0F5GXK4ZZ"],
+    pinterest: {
+      titles: [
+        "Halloween Activity Books for Kids",
+        "Cute Halloween Coloring Activity Ideas",
+        "Halloween Basket Activity Book Picks",
+      ],
+      descriptions: [
+        "A Halloween activity book guide focused on coloring books, cute spooky themes, baskets, classroom ideas, and fall fun.",
+        "Save these Halloween activity book ideas for kids, families, party favors, and cozy screen-free October time.",
+        "Explore coloring-focused Halloween activity books with ghosts, pumpkins, witches, animals, and bold easy pages.",
+      ],
+      keywords: [
+        "Halloween activity books",
+        "kids Halloween coloring activities",
+        "Halloween basket books",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Halloween Coloring Books for Kids",
+        href: "/halloween-coloring-books-for-kids",
+        description: "Kid-friendly coloring books for October activities.",
+      },
+      {
+        label: "Halloween Coloring Book Gift Ideas",
+        href: "/halloween-coloring-book-gift-ideas",
+        description: "Gift-friendly coloring book ideas for Halloween season.",
+      },
+      {
+        label: "Bold and Easy Halloween Coloring Books",
+        href: "/bold-and-easy-halloween-coloring-books",
+        description: "Simple coloring books for beginners and casual activities.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Are Halloween activity books the same as coloring books?",
+        answer:
+          "Some Halloween activity books include puzzles or games, but this guide focuses on coloring-focused books and creative seasonal activity ideas.",
+      },
+      {
+        question: "Who are Halloween activity books best for?",
+        answer:
+          "They can work for kids, families, classrooms, parties, gift baskets, and anyone who wants a simple screen-free October activity.",
+      },
+      {
+        question: "Should I check Amazon before buying?",
+        answer:
+          "Yes. Check Amazon product pages for current availability, reviews, shipping, and product details.",
+      },
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {
