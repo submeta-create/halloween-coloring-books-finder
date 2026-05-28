@@ -70,7 +70,6 @@ export function getHomepageItemListSchema(books: Product[]) {
       "@type": "ListItem",
       position: index + 1,
       name: book.title,
-      url: `${site.url}/books/${book.asin}`,
       image: `${site.url}/covers/${book.asin}.jpg`,
       item: getBookSchema(book),
     })),
