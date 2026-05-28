@@ -7,6 +7,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: site.url,
       lastModified: new Date(),
     },
+    {
+      url: `${site.url}/imprint`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${site.url}/privacy`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${site.url}/affiliate-disclosure`,
+      lastModified: new Date(),
+    },
     ...categories.map((category) => ({
       url: `${site.url}/categories/${category.slug}`,
       lastModified: new Date(),
