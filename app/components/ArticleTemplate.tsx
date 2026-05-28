@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FAQ } from "@/app/components/FAQ";
+import { PinThisIdea } from "@/app/components/PinThisIdea";
 import { RelatedLinks } from "@/app/components/RelatedLinks";
 import type { Product } from "@/app/data/products";
 import type { SeoArticle } from "@/app/data/articles";
@@ -14,6 +15,11 @@ export function ArticleTemplate({
   article,
   featuredBooks,
 }: ArticleTemplateProps) {
+  const categoryLinks = article.relatedThemes.filter((link) =>
+    link.href.startsWith("/categories/")
+  );
+  const relatedBookLinks = featuredBooks.slice(0, 3);
+
   return (
     <main className="min-h-screen bg-[#f5efe6] px-6 py-12">
       <div className="mx-auto max-w-7xl">
@@ -108,6 +114,53 @@ export function ArticleTemplate({
             </div>
           </section>
 
+          <section className="mt-16 grid gap-8 lg:grid-cols-2">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+              <h2 className="text-3xl font-black text-black">
+                More Book Picks
+              </h2>
+              <p className="mt-3 leading-7 text-zinc-700">
+                Continue with related book pages that include ASIN references,
+                editorial notes, and Amazon product links.
+              </p>
+
+              <div className="mt-5 grid gap-3">
+                {relatedBookLinks.map((book) => (
+                  <Link
+                    key={book.asin}
+                    href={`/books/${book.asin}`}
+                    className="rounded-xl border border-zinc-200 px-4 py-3 font-semibold text-zinc-800 hover:border-zinc-400"
+                  >
+                    {book.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+              <h2 className="text-3xl font-black text-black">
+                Browse Categories
+              </h2>
+              <p className="mt-3 leading-7 text-zinc-700">
+                Explore the main category pages for broader Halloween coloring
+                book collections.
+              </p>
+
+              <div className="mt-5 grid gap-3">
+                {categoryLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="rounded-xl border border-zinc-200 px-4 py-3 font-semibold text-zinc-800 hover:border-zinc-400"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <PinThisIdea snippet={article.pinterest} />
           <RelatedLinks links={article.relatedThemes} />
           <FAQ items={article.faqs} />
         </article>

@@ -11,6 +11,12 @@ export type ArticleFaq = {
   answer: string;
 };
 
+export type PinterestSnippet = {
+  titles: string[];
+  descriptions: string[];
+  keywords: string[];
+};
+
 export type SeoArticle = {
   slug: string;
   title: string;
@@ -19,6 +25,7 @@ export type SeoArticle = {
   bestFor: string[];
   featuredAsins: string[];
   relatedThemes: ArticleLink[];
+  pinterest: PinterestSnippet;
   faqs: ArticleFaq[];
 };
 
@@ -36,6 +43,23 @@ export const articles: SeoArticle[] = [
       "Coloring fans who prefer cute, seasonal, and low-pressure pages",
     ],
     featuredAsins: ["B0F6KDB4X1", "B0F87HTSXR", "B0F5GXK4ZZ", "B0FRXTXL9Y"],
+    pinterest: {
+      titles: [
+        "Halloween Coloring Books for Cozy Adult Coloring",
+        "Relaxing Halloween Coloring Books for Fall Nights",
+        "Cozy Spooky Coloring Book Gift Ideas for Adults",
+      ],
+      descriptions: [
+        "A calm Halloween coloring guide for adults who like cozy spooky pages, autumn themes, and screen-free creative time.",
+        "Explore Halloween coloring books with cute seasonal artwork, relaxing pages, and gift-friendly October themes.",
+        "Save these cozy Halloween coloring book ideas for fall evenings, self-care baskets, and creative seasonal gifts.",
+      ],
+      keywords: [
+        "adult Halloween coloring books",
+        "cozy spooky coloring",
+        "fall coloring book gifts",
+      ],
+    },
     relatedThemes: [
       {
         label: "Cozy Spooky Coloring Books",
@@ -84,6 +108,23 @@ export const articles: SeoArticle[] = [
       "Gift baskets, classroom treats, and cozy October afternoons",
     ],
     featuredAsins: ["B0F5GXK4ZZ", "B0F7X8W5J3", "B0FK9SYH6W", "B0FC2HL9PN"],
+    pinterest: {
+      titles: [
+        "Cute Ghost Coloring Books for Halloween",
+        "Friendly Ghost Coloring Pages for Cozy October",
+        "Cute Spooky Coloring Book Ideas with Ghosts",
+      ],
+      descriptions: [
+        "A friendly Halloween coloring guide for readers who like cute ghosts, pumpkins, cozy scenes, and soft spooky artwork.",
+        "Save these cute ghost coloring book ideas for classroom gifts, Halloween baskets, and relaxed October activities.",
+        "Find ghost-themed coloring books with playful characters, cozy Halloween details, and gentle seasonal moods.",
+      ],
+      keywords: [
+        "cute ghost coloring books",
+        "friendly Halloween ghosts",
+        "cozy ghost coloring pages",
+      ],
+    },
     relatedThemes: [
       {
         label: "Ghost Coloring Books",
@@ -132,6 +173,23 @@ export const articles: SeoArticle[] = [
       "Seasonal gifts for Halloween and cozy fall routines",
     ],
     featuredAsins: ["B0F6KDB4X1", "B0FKNDH6VD", "B0F5GXK4ZZ", "B0FMPXV23H"],
+    pinterest: {
+      titles: [
+        "Cozy Halloween Coloring Books for Fall Nights",
+        "Cute and Cozy Spooky Coloring Book Ideas",
+        "Relaxing Halloween Coloring Books with Autumn Vibes",
+      ],
+      descriptions: [
+        "A cozy Halloween coloring guide with friendly ghosts, pumpkins, autumn comfort, and relaxing seasonal book ideas.",
+        "Save these cozy spooky coloring books for fall evenings, Halloween gifts, and simple screen-free activities.",
+        "Explore soft Halloween coloring themes for kids, teens, and adults who like cute seasonal artwork.",
+      ],
+      keywords: [
+        "cozy Halloween coloring books",
+        "cute spooky coloring",
+        "fall coloring activities",
+      ],
+    },
     relatedThemes: [
       {
         label: "Cozy Spooky Coloring Books",
@@ -180,6 +238,23 @@ export const articles: SeoArticle[] = [
       "Seasonal gifts, classroom activities, and cozy weekend coloring",
     ],
     featuredAsins: ["B0FKNDH6VD", "B0FK9SYH6W", "B0F5GXK4ZZ", "B0F7X8W5J3"],
+    pinterest: {
+      titles: [
+        "Pumpkin Coloring Books for Fall and Halloween",
+        "Cute Pumpkin Coloring Book Ideas for October",
+        "Cozy Fall Coloring Books with Pumpkins",
+      ],
+      descriptions: [
+        "A simple guide to pumpkin coloring books with fall scenes, jack-o-lanterns, cozy Halloween details, and seasonal gift ideas.",
+        "Save these pumpkin coloring book ideas for autumn activities, Halloween baskets, and relaxed weekend coloring.",
+        "Explore coloring books with pumpkins, ghosts, fall leaves, and friendly seasonal artwork for kids and adults.",
+      ],
+      keywords: [
+        "pumpkin coloring books",
+        "fall coloring books",
+        "Halloween pumpkin coloring",
+      ],
+    },
     relatedThemes: [
       {
         label: "Cute Halloween Coloring Books",
@@ -228,6 +303,23 @@ export const articles: SeoArticle[] = [
       "Readers looking for cozy Halloween books with playful characters",
     ],
     featuredAsins: ["B0FGP9HQ24", "B0F7X8W5J3", "B0FC2HL9PN", "B0F5GXK4ZZ"],
+    pinterest: {
+      titles: [
+        "Cute Bold Halloween Coloring Books to Try",
+        "Cozy Coloring Books with Simple Spooky Pages",
+        "Halloween Coloring Books with a Cute Easy Style",
+      ],
+      descriptions: [
+        "A neutral guide for readers who enjoy cute, bold, easy-to-color Halloween books with playful seasonal artwork.",
+        "Save these cozy spooky coloring book picks if you like simple pages, cute characters, and relaxed fall coloring.",
+        "Explore approachable Halloween coloring books with bold outlines, friendly themes, and gift-friendly October vibes.",
+      ],
+      keywords: [
+        "bold easy Halloween coloring",
+        "cute spooky coloring books",
+        "simple Halloween coloring pages",
+      ],
+    },
     relatedThemes: [
       {
         label: "Bold and Easy Halloween Coloring Books",
