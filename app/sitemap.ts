@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { articles } from "@/app/data/articles";
 import { categories, products, site } from "@/app/data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,6 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${site.url}/affiliate-disclosure`,
       lastModified: new Date(),
     },
+    ...articles.map((article) => ({
+      url: `${site.url}/${article.slug}`,
+      lastModified: new Date(),
+    })),
     ...categories.map((category) => ({
       url: `${site.url}/categories/${category.slug}`,
       lastModified: new Date(),
