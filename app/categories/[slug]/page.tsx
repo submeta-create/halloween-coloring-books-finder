@@ -7,6 +7,7 @@ import {
   getProductsByCategory,
   site,
 } from "@/app/data/products";
+import { getAmazonUrl } from "@/app/lib/amazon";
 
 export function generateStaticParams() {
   return categories.map((category) => ({
@@ -172,7 +173,7 @@ export default async function CategoryPage({
 
               <div className="mt-auto flex gap-3 pt-6">
                 <a
-                  href={`https://www.amazon.com/dp/${book.asin}`}
+                  href={getAmazonUrl(book.asin)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-2xl bg-black px-5 py-3 font-semibold text-white"

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { TrustBox } from "@/app/components/TrustBox";
 import { TrustSignal } from "@/app/components/TrustSignal";
+import { getAmazonUrl } from "@/app/lib/amazon";
 import {
   getProductTags,
   getRelatedProducts,
@@ -94,7 +95,7 @@ export default async function BookPage({
     ],
     image: `${site.url}/covers/${book.asin}.jpg`,
     url: `${site.url}/books/${book.asin}`,
-    sameAs: `https://www.amazon.com/dp/${book.asin}`,
+    sameAs: getAmazonUrl(book.asin),
     keywords: productTags.join(", "),
   };
 
@@ -216,7 +217,7 @@ export default async function BookPage({
             </div>
 
             <a
-              href={`https://www.amazon.com/dp/${book.asin}`}
+              href={getAmazonUrl(book.asin)}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-block rounded-2xl bg-black px-8 py-5 text-xl font-bold text-white"
@@ -317,7 +318,7 @@ export default async function BookPage({
 
                 <div className="mt-auto flex gap-3 pt-6">
                   <a
-                    href={`https://www.amazon.com/dp/${related.asin}`}
+                    href={getAmazonUrl(related.asin)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-2xl bg-black px-5 py-3 font-semibold text-white"

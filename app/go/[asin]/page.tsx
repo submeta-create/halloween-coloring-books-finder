@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useParams } from "next/navigation";
+import { getAmazonUrl } from "@/app/lib/amazon";
 
 export default function GoPage() {
   const params = useParams<{ asin: string }>();
@@ -11,7 +12,7 @@ export default function GoPage() {
     if (!asin) return;
 
     const timer = setTimeout(() => {
-      window.location.href = `https://www.amazon.com/dp/${asin}`;
+      window.location.href = getAmazonUrl(asin);
     }, 900);
 
     return () => clearTimeout(timer);
