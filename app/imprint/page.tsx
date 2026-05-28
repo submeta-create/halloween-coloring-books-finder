@@ -26,6 +26,16 @@ export default function ImprintPage() {
               <dd className="mt-1">ET Publishing LLC</dd>
             </div>
             <div>
+              <dt className="font-bold text-black">Responsible entity</dt>
+              <dd className="mt-1">ET Publishing LLC</dd>
+            </div>
+            <div>
+              <dt className="font-bold text-black">Address</dt>
+              <dd className="mt-1">
+                Registered business address available upon request.
+              </dd>
+            </div>
+            <div>
               <dt className="font-bold text-black">Email</dt>
               <dd className="mt-1">
                 <a
@@ -37,9 +47,14 @@ export default function ImprintPage() {
               </dd>
             </div>
             <div>
+              <dt className="font-bold text-black">Country</dt>
+              <dd className="mt-1">United States</dd>
+            </div>
+            <div>
               <dt className="font-bold text-black">Purpose</dt>
               <dd className="mt-1">
-                Informational website for coloring book recommendations.
+                Informational website for coloring book recommendations and
+                seasonal book discovery.
               </dd>
             </div>
           </dl>
