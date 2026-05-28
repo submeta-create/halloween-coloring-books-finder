@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import { TrustBox } from "@/app/components/TrustBox";
 import { TrustSignal } from "@/app/components/TrustSignal";
 import { getAmazonUrl } from "@/app/lib/amazon";
+import { getBookSchema } from "@/app/lib/schema";
 import {
-  getProductTags,
   getRelatedProducts,
   products,
   site,
@@ -76,27 +76,9 @@ export default async function BookPage({
   }
 
   const relatedBooks = getRelatedProducts(book);
-  const productTags = getProductTags(book);
-
   const bookSchema = {
     "@context": "https://schema.org",
-    "@type": "Book",
-    name: book.title,
-    author: {
-      "@type": "Person",
-      name: "Ella Tarling",
-    },
-    bookFormat: "Paperback",
-    inLanguage: "en",
-    genre: [
-      "Coloring Book",
-      "Halloween Coloring Book",
-      "Cozy Coloring Book",
-    ],
-    image: `${site.url}/covers/${book.asin}.jpg`,
-    url: `${site.url}/books/${book.asin}`,
-    sameAs: getAmazonUrl(book.asin),
-    keywords: productTags.join(", "),
+    ...getBookSchema(book),
   };
 
   const breadcrumbSchema = {

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { categories, products, type Product } from "@/app/data/products";
+import { getHomepageItemListSchema } from "@/app/lib/schema";
 
 const guideLinks = [
   {
@@ -167,9 +168,17 @@ export default function HomePage() {
   const fallAutumnBooks = filteredProducts.filter((book) =>
     includesAny(book, ["fall", "season", "winter", "christmas"])
   );
+  const homepageItemListSchema = getHomepageItemListSchema(products);
 
   return (
     <main className="min-h-screen bg-[#f5efe6] px-6 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homepageItemListSchema),
+        }}
+      />
+
       <div className="mx-auto max-w-7xl">
         <header className="max-w-4xl">
           <h1 className="text-6xl font-black leading-tight text-black">
