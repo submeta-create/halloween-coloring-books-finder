@@ -22,24 +22,25 @@ export default function ImprintPage() {
 
           <dl className="mt-8 grid gap-5 text-zinc-700">
             <div>
-              <dt className="font-bold text-black">Business name</dt>
-              <dd className="mt-1">[Business name]</dd>
-            </div>
-            <div>
-              <dt className="font-bold text-black">Responsible person</dt>
-              <dd className="mt-1">[Responsible person]</dd>
-            </div>
-            <div>
-              <dt className="font-bold text-black">Address</dt>
-              <dd className="mt-1">[Address]</dd>
+              <dt className="font-bold text-black">Company</dt>
+              <dd className="mt-1">ET Publishing LLC</dd>
             </div>
             <div>
               <dt className="font-bold text-black">Email</dt>
-              <dd className="mt-1">[Email]</dd>
+              <dd className="mt-1">
+                <a
+                  href="mailto:contact@cozyhalloweenbooks.com"
+                  className="font-medium text-black underline-offset-4 hover:underline"
+                >
+                  contact [at] cozyhalloweenbooks.com
+                </a>
+              </dd>
             </div>
             <div>
-              <dt className="font-bold text-black">Country</dt>
-              <dd className="mt-1">[Country]</dd>
+              <dt className="font-bold text-black">Purpose</dt>
+              <dd className="mt-1">
+                Informational website for coloring book recommendations.
+              </dd>
             </div>
           </dl>
         </section>

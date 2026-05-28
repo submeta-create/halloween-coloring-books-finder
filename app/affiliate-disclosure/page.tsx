@@ -28,15 +28,21 @@ export default function AffiliateDisclosurePage() {
             </p>
 
             <p>
-              Some links on Cozy Halloween Books may lead to Amazon product
-              pages. These links help readers find current product information,
+              Cozy Halloween Books uses external links to Amazon product pages.
+              These links help readers check current product information,
               availability, and reviews directly on Amazon.
             </p>
 
             <p>
+              The website may use affiliate partnerships in the future. If a
+              purchase is made through an affiliate link, the site may earn a
+              commission at no additional cost to the reader.
+            </p>
+
+            <p>
               Editorial selections are presented as curated Halloween coloring
-              book picks and do not include manually copied Amazon ratings or
-              review counts.
+              book picks. Amazon ratings, reviews, and availability should be
+              checked on Amazon.
             </p>
           </div>
         </section>

@@ -27,13 +27,19 @@ export default function PrivacyPage() {
             </p>
 
             <p>
-              The site uses Vercel Analytics to understand basic anonymous usage
-              patterns, such as page visits and general site performance.
+              The website uses Vercel Analytics to understand basic anonymous
+              usage patterns, such as page visits and general site performance.
             </p>
 
             <p>
-              There is currently no account creation, no newsletter signup, and
+              There are no user accounts, no comments, no newsletter signup, and
               no direct payment processing on this website.
+            </p>
+
+            <p>
+              Cozy Halloween Books does not directly store personal data beyond
+              basic analytics and standard server logs that may be created when
+              the website is accessed.
             </p>
 
             <p>
