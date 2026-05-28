@@ -33,6 +33,9 @@ export const metadata: Metadata = {
       "Cute, spooky and cozy Halloween coloring books for kids, teens and adults.",
     images: ["/og-image.jpg"],
   },
+  other: {
+    "p:domain_verify": "0cb93d792930ea8778ea575a1cbf90de",
+  },
 };
 
 export default function RootLayout({
