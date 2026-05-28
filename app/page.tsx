@@ -149,6 +149,16 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-10 max-w-5xl rounded-2xl border border-orange-100 bg-white/70 px-6 py-5 shadow-sm">
+            <p className="text-base leading-8 text-zinc-600">
+              Discover cozy Halloween coloring books for kids, teens, and
+              adults featuring cute ghosts, pumpkins, witches, spooky animals,
+              bold & easy coloring pages, relaxing autumn scenes, and cozy
+              spooky artwork perfect for Halloween season, gifts, fall
+              activities, and relaxing creative time.
+            </p>
+          </div>
         </section>
 
         <section className="mt-20">
