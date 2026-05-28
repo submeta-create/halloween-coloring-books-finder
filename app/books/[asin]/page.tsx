@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { TrustBox } from "@/app/components/TrustBox";
+import { TrustSignal } from "@/app/components/TrustSignal";
 import {
   getProductTags,
   getRelatedProducts,
@@ -275,6 +276,8 @@ export default async function BookPage({
                 </p>
               </div>
             </section>
+
+            <TrustSignal />
           </div>
         </div>
 
