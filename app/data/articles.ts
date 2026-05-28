@@ -355,6 +355,331 @@ export const articles: SeoArticle[] = [
       },
     ],
   },
+  {
+    slug: "halloween-coloring-books-for-teens",
+    title: "Halloween Coloring Books for Teens",
+    description:
+      "A curated guide to Halloween coloring books for teens with cute spooky themes, cozy fall moods, bold pages, and relaxed creative activities.",
+    intro:
+      "Halloween coloring books for teens work well when they feel fun, seasonal, and not too childish. This guide focuses on cute spooky books, cozy autumn themes, bold easy pages, and creative October activities teens can enjoy at home or as gifts.",
+    bestFor: [
+      "Teens who like cute spooky Halloween artwork",
+      "Relaxing screen-free activities for October",
+      "Gift ideas for fall birthdays, Halloween baskets, and cozy weekends",
+    ],
+    featuredAsins: ["B0F7X8W5J3", "B0FJ5HTSYG", "B0FC69CCRF", "B0F5GXK4ZZ"],
+    pinterest: {
+      titles: [
+        "Halloween Coloring Books for Teens",
+        "Cute Spooky Coloring Books Teens Will Like",
+        "Cozy Halloween Activity Ideas for Teens",
+      ],
+      descriptions: [
+        "A teen-friendly Halloween coloring guide with cute spooky books, cozy seasonal themes, and relaxed creative ideas.",
+        "Save these Halloween coloring book picks for teens who enjoy ghosts, pumpkins, cute characters, and autumn vibes.",
+        "Explore cozy spooky coloring books that make simple October gifts, weekend activities, and screen-free breaks.",
+      ],
+      keywords: [
+        "Halloween coloring books for teens",
+        "cute spooky teen coloring",
+        "Halloween activity books",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Cute Halloween Coloring Books",
+        href: "/categories/cute-halloween",
+        description: "Friendly spooky books with cute seasonal artwork.",
+      },
+      {
+        label: "Cozy Spooky Coloring Books",
+        href: "/categories/cozy-spooky",
+        description: "Relaxing Halloween books with soft spooky moods.",
+      },
+      {
+        label: "Spooky Girl Coloring Book",
+        href: "/books/B0FJ5HTSYG",
+        description: "A teen-friendly spooky coloring book pick.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What kind of Halloween coloring books are good for teens?",
+        answer:
+          "Teen-friendly Halloween coloring books often use cute spooky themes, stylish characters, cozy scenes, and pages that feel relaxing without being too simple.",
+      },
+      {
+        question: "Can Halloween coloring books be good teen gifts?",
+        answer:
+          "Yes. They can work as Halloween basket additions, fall birthday gifts, or quiet creative activities during October.",
+      },
+      {
+        question: "Does this page use fake ratings?",
+        answer:
+          "No. This site does not display fake reviews, star ratings, or review counts. Check Amazon for current reviews and availability.",
+      },
+    ],
+  },
+  {
+    slug: "bold-and-easy-halloween-coloring-books",
+    title: "Bold and Easy Halloween Coloring Books",
+    description:
+      "Find bold and easy Halloween coloring books with simple seasonal pages, clear outlines, cute spooky themes, and beginner-friendly designs.",
+    intro:
+      "Bold and easy Halloween coloring books are useful when readers want simple pages, clear shapes, and low-stress seasonal coloring. They can be a good fit for kids, beginners, casual coloring fans, and adults who prefer relaxing pages over complex designs.",
+    bestFor: [
+      "Beginners and casual coloring fans",
+      "Kids who like simple Halloween shapes",
+      "Adults who want quick, relaxing seasonal pages",
+    ],
+    featuredAsins: ["B0FGP9HQ24", "B0FC2HL9PN", "B0F7X8W5J3", "B0FMPTFWC7"],
+    pinterest: {
+      titles: [
+        "Bold and Easy Halloween Coloring Books",
+        "Simple Halloween Coloring Books for Kids and Adults",
+        "Easy Spooky Coloring Pages for Cozy October",
+      ],
+      descriptions: [
+        "A simple guide to bold and easy Halloween coloring books with clear outlines, cute spooky pages, and relaxing seasonal themes.",
+        "Save these easy Halloween coloring book ideas for kids, beginners, adults, and casual coloring sessions.",
+        "Explore bold Halloween coloring books with pumpkins, ghosts, cute characters, and low-stress page designs.",
+      ],
+      keywords: [
+        "bold easy Halloween coloring books",
+        "simple Halloween coloring pages",
+        "beginner coloring books",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Bold and Easy Halloween Coloring Books",
+        href: "/categories/bold-easy",
+        description: "A category for simple, clear Halloween coloring books.",
+      },
+      {
+        label: "Cute Halloween Coloring Books",
+        href: "/categories/cute-halloween",
+        description: "Friendly Halloween designs with cute seasonal details.",
+      },
+      {
+        label: "Halloween Bold and Easy Coloring Book",
+        href: "/books/B0FGP9HQ24",
+        description: "A featured bold easy Halloween coloring book pick.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Who should choose bold and easy Halloween coloring books?",
+        answer:
+          "They are a good fit for beginners, kids, casual colorists, and anyone who prefers clear outlines and simple seasonal scenes.",
+      },
+      {
+        question: "Are bold and easy books only for children?",
+        answer:
+          "No. Adults and teens can also enjoy bold and easy books when they want relaxing pages without tiny details.",
+      },
+      {
+        question: "Do these pages include Amazon review counts?",
+        answer:
+          "No. Review counts are not displayed unless they come from an approved Amazon API later.",
+      },
+    ],
+  },
+  {
+    slug: "cute-halloween-coloring-books",
+    title: "Cute Halloween Coloring Books",
+    description:
+      "Explore cute Halloween coloring books with friendly ghosts, pumpkins, animals, cozy scenes, and playful spooky themes for seasonal coloring.",
+    intro:
+      "Cute Halloween coloring books make spooky season feel friendly and creative. This hub highlights books with cozy ghosts, pumpkins, animals, witches, snacks, and playful Halloween scenes for kids, teens, and adults.",
+    bestFor: [
+      "Readers who prefer friendly Halloween art",
+      "Halloween gifts, baskets, and cozy fall activities",
+      "Kids, teens, and adults who like cute spooky designs",
+    ],
+    featuredAsins: ["B0F5GXK4ZZ", "B0FK9SYH6W", "B0F7X8W5J3", "B0FBFT2GVR"],
+    pinterest: {
+      titles: [
+        "Cute Halloween Coloring Books",
+        "Friendly Spooky Coloring Books for October",
+        "Cute Ghost and Pumpkin Coloring Book Ideas",
+      ],
+      descriptions: [
+        "A cute Halloween coloring guide with friendly ghosts, pumpkins, witches, animals, and cozy seasonal book picks.",
+        "Save these cute spooky coloring books for Halloween baskets, fall gifts, and relaxed October activities.",
+        "Explore friendly Halloween coloring books for kids, teens, adults, and anyone who likes softer spooky themes.",
+      ],
+      keywords: [
+        "cute Halloween coloring books",
+        "friendly spooky coloring",
+        "Halloween coloring gifts",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Cute Halloween Coloring Books",
+        href: "/categories/cute-halloween",
+        description: "The main category for cute and friendly Halloween books.",
+      },
+      {
+        label: "Ghost Coloring Books",
+        href: "/categories/ghost-coloring-books",
+        description: "Friendly ghost-themed Halloween coloring books.",
+      },
+      {
+        label: "Spooky Snuggles Halloween Coloring Book",
+        href: "/books/B0F5GXK4ZZ",
+        description: "A cute cozy Halloween coloring book pick.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What makes a Halloween coloring book cute?",
+        answer:
+          "Cute Halloween coloring books usually use friendly characters, soft spooky scenes, pumpkins, ghosts, animals, and playful seasonal details.",
+      },
+      {
+        question: "Are cute Halloween coloring books good for adults too?",
+        answer:
+          "Yes. Many adults enjoy cute Halloween books for relaxing, low-pressure coloring and seasonal self-care time.",
+      },
+      {
+        question: "Are these recommendations based on fake reviews?",
+        answer:
+          "No. These are editorially curated site picks using existing book data, without fake reviews or ratings.",
+      },
+    ],
+  },
+  {
+    slug: "cozy-spooky-coloring-books",
+    title: "Cozy Spooky Coloring Books",
+    description:
+      "Discover cozy spooky coloring books with soft Halloween moods, friendly ghosts, autumn scenes, cute characters, and relaxing seasonal pages.",
+    intro:
+      "Cozy spooky coloring books sit between cute Halloween and relaxing fall self-care. They often include friendly ghosts, warm drinks, pumpkins, pets, blankets, and soft seasonal scenes that feel spooky without being intense.",
+    bestFor: [
+      "Readers who like gentle spooky season atmosphere",
+      "Relaxing fall coloring sessions",
+      "Cozy Halloween gifts for teens and adults",
+    ],
+    featuredAsins: ["B0F6KDB4X1", "B0F87HTSXR", "B0FMPXV23H", "B0F5GXK4ZZ"],
+    pinterest: {
+      titles: [
+        "Cozy Spooky Coloring Books",
+        "Relaxing Halloween Coloring Books with Cozy Vibes",
+        "Cute Spooky Coloring Books for Fall Nights",
+      ],
+      descriptions: [
+        "A cozy spooky coloring guide with friendly ghosts, pumpkins, pets, autumn comfort, and relaxed Halloween book ideas.",
+        "Save these cozy Halloween coloring books for fall evenings, self-care gifts, and screen-free creative time.",
+        "Explore soft spooky coloring books for readers who like cute seasonal artwork without scary themes.",
+      ],
+      keywords: [
+        "cozy spooky coloring books",
+        "relaxing Halloween coloring",
+        "cute spooky fall books",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Cozy Spooky Coloring Books",
+        href: "/categories/cozy-spooky",
+        description: "The main category for soft spooky seasonal books.",
+      },
+      {
+        label: "Cute Halloween Coloring Books",
+        href: "/categories/cute-halloween",
+        description: "Friendly Halloween books with cute artwork.",
+      },
+      {
+        label: "Cozy Spooky Coloring Book",
+        href: "/books/B0F6KDB4X1",
+        description: "A featured cozy spooky coloring book pick.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What does cozy spooky mean?",
+        answer:
+          "Cozy spooky means Halloween-inspired art that feels soft, friendly, and relaxing, often with pumpkins, ghosts, warm drinks, pets, and autumn scenes.",
+      },
+      {
+        question: "Who are cozy spooky coloring books for?",
+        answer:
+          "They can work for teens, adults, and kids who enjoy Halloween themes but prefer gentle, cute, and relaxing artwork.",
+      },
+      {
+        question: "Do cozy spooky pages show star ratings?",
+        answer:
+          "No. This site does not manually display Amazon star ratings or copied review data.",
+      },
+    ],
+  },
+  {
+    slug: "halloween-coloring-book-gift-ideas",
+    title: "Halloween Coloring Book Gift Ideas",
+    description:
+      "A curated guide to Halloween coloring book gift ideas for kids, teens, adults, baskets, fall birthdays, and cozy seasonal activities.",
+    intro:
+      "Halloween coloring books can make simple seasonal gifts because they are easy to pair with markers, gel pens, candy, cozy socks, or a fall self-care basket. This guide highlights gift-friendly Halloween coloring books with cute, cozy, spooky, and bold easy themes.",
+    bestFor: [
+      "Halloween baskets and October birthday gifts",
+      "Screen-free seasonal activities for kids, teens, and adults",
+      "Cozy fall self-care bundles and creative gift boxes",
+    ],
+    featuredAsins: ["B0F5GXK4ZZ", "B0FGP9HQ24", "B0FK9SYH6W", "B0FMPXV23H"],
+    pinterest: {
+      titles: [
+        "Halloween Coloring Book Gift Ideas",
+        "Cozy Halloween Basket Ideas for Coloring Fans",
+        "Cute Spooky Coloring Books to Gift This Fall",
+      ],
+      descriptions: [
+        "A simple Halloween coloring book gift guide for baskets, fall birthdays, cozy self-care boxes, and creative October activities.",
+        "Save these Halloween coloring book ideas for kids, teens, adults, and anyone who likes cute spooky seasonal gifts.",
+        "Explore gift-friendly coloring books with pumpkins, ghosts, cozy fall themes, and bold easy Halloween pages.",
+      ],
+      keywords: [
+        "Halloween coloring book gifts",
+        "Halloween basket ideas",
+        "cozy fall gift ideas",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Cute Halloween Coloring Books",
+        href: "/categories/cute-halloween",
+        description: "Friendly seasonal books for gift baskets.",
+      },
+      {
+        label: "Bold and Easy Halloween Coloring Books",
+        href: "/categories/bold-easy",
+        description: "Simple coloring books for casual gift recipients.",
+      },
+      {
+        label: "Cozy Spooky Coloring Books",
+        href: "/categories/cozy-spooky",
+        description: "Relaxing Halloween books for cozy fall gifts.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Are Halloween coloring books good gifts?",
+        answer:
+          "Yes. They are simple seasonal gifts and can pair well with coloring supplies, fall treats, or cozy basket items.",
+      },
+      {
+        question: "Who can receive a Halloween coloring book gift?",
+        answer:
+          "Depending on the book style, Halloween coloring books can work for kids, teens, adults, beginners, and cozy spooky coloring fans.",
+      },
+      {
+        question: "Should I check Amazon before buying?",
+        answer:
+          "Yes. Use the Amazon product page to check current availability, reviews, delivery options, and product details.",
+      },
+    ],
+  },
 ];
 
 export function getArticle(slug: string) {
