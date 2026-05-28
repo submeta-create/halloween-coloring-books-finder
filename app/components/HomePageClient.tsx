@@ -96,12 +96,24 @@ const themeLinks = [
     title: "Cute Halloween Coloring Books",
   },
   {
+    href: "/kawaii-halloween-coloring-books",
+    title: "Kawaii Halloween Coloring Books",
+  },
+  {
     href: "/cozy-spooky-coloring-books",
     title: "Cozy Spooky Coloring Books",
   },
   {
+    href: "/cozy-ghost-coloring-books",
+    title: "Cozy Ghost Coloring Books",
+  },
+  {
     href: "/bold-and-easy-halloween-coloring-books",
     title: "Bold and Easy Halloween Coloring Books",
+  },
+  {
+    href: "/easy-pumpkin-coloring-pages",
+    title: "Easy Pumpkin Coloring Pages",
   },
   {
     href: "/spooky-animal-coloring-books",
