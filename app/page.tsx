@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { products } from "@/app/data/products";
+import Image from "next/image";
+import { categories, products } from "@/app/data/products";
 
 export default function HomePage() {
   const [search, setSearch] = useState("");
@@ -33,39 +34,23 @@ export default function HomePage() {
           />
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/categories/cute-halloween"
-              className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
-            >
-              Cute Halloween
-            </Link>
-
-            <Link
-              href="/categories/cozy-spooky"
-              className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
-            >
-              Cozy Coloring
-            </Link>
-
-            <Link
-              href="/categories/ghost-coloring-books"
-              className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
-            >
-              Ghosts & Pumpkins
-            </Link>
-
-            <Link
-              href="/categories/bold-easy"
-              className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
-            >
-              Bold & Easy
-            </Link>
+            {categories.map((category) => (
+              <Link
+                key={category.slug}
+                href={`/categories/${category.slug}`}
+                className="rounded-full bg-black px-5 py-3 text-sm font-bold text-white"
+              >
+                {category.title.replace(" Coloring Books", "")}
+              </Link>
+            ))}
           </div>
         </header>
 
         <section className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-3xl bg-white p-8 shadow-sm">
-            <h2 className="text-5xl font-black text-black">29</h2>
+            <h2 className="text-5xl font-black text-black">
+              {products.length}
+            </h2>
             <p className="mt-3 text-2xl text-zinc-500">
               Halloween Books
             </p>
@@ -100,9 +85,11 @@ export default function HomePage() {
               className="flex min-h-[520px] flex-col rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
               <Link href={`/books/${book.asin}`}>
-                <img
+                <Image
                   src={`/covers/${book.asin}.jpg`}
                   alt={book.title}
+                  width={800}
+                  height={800}
                   loading="lazy"
                   className="aspect-square w-full rounded-2xl object-cover"
                 />

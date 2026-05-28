@@ -1,32 +1,55 @@
-import { products } from "@/app/data/products";
+import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import {
+  categories,
+  getCategory,
+  getProductsByCategory,
+  site,
+} from "@/app/data/products";
 
-const categories = {
-  "cute-halloween": {
-    title: "Cute Halloween Coloring Books",
-    description:
-      "Cute Halloween coloring books with cozy ghosts, pumpkins, kawaii animals, and spooky autumn vibes.",
-    keywords: ["cute", "spooky", "cozy", "halloween"],
-  },
-  "cozy-spooky": {
-    title: "Cozy Spooky Coloring Books",
-    description:
-      "Relaxing cozy spooky coloring books for autumn nights, Halloween gifts, and screen-free creative time.",
-    keywords: ["cozy", "spooky", "snuggles", "chill"],
-  },
-  "ghost-coloring-books": {
-    title: "Ghost Coloring Books",
-    description:
-      "Cute ghost coloring books with friendly spooky characters, cozy scenes, and Halloween fun.",
-    keywords: ["ghost", "spooky"],
-  },
-  "bold-easy": {
-    title: "Bold and Easy Halloween Coloring Books",
-    description:
-      "Bold and easy Halloween coloring books with simple, clear, relaxing designs for kids, teens, and adults.",
-    keywords: ["bold", "easy", "simple"],
-  },
-};
+export function generateStaticParams() {
+  return categories.map((category) => ({
+    slug: category.slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const category = getCategory(slug);
+
+  if (!category) {
+    return {
+      title: "Halloween Coloring Books",
+    };
+  }
+
+  return {
+    title: `${category.title} | ${site.name}`,
+    description: category.description,
+    alternates: {
+      canonical: `${site.url}/categories/${category.slug}`,
+    },
+    openGraph: {
+      title: `${category.title} | ${site.name}`,
+      description: category.description,
+      url: `${site.url}/categories/${category.slug}`,
+      type: "website",
+      images: [
+        {
+          url: `${site.url}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: category.title,
+        },
+      ],
+    },
+  };
+}
 
 export default async function CategoryPage({
   params,
@@ -34,20 +57,61 @@ export default async function CategoryPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const category = categories[slug as keyof typeof categories];
+  const category = getCategory(slug);
 
   if (!category) {
     return <main className="p-8">Category not found.</main>;
   }
 
-  const filteredBooks = products.filter((book) =>
-    category.keywords.some((keyword) =>
-      book.title.toLowerCase().includes(keyword.toLowerCase())
-    )
-  );
+  const filteredBooks = getProductsByCategory(slug);
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: site.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: category.title,
+        item: `${site.url}/categories/${category.slug}`,
+      },
+    ],
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: category.title,
+    description: category.description,
+    itemListElement: filteredBooks.map((book, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${site.url}/books/${book.asin}`,
+      name: book.title,
+    })),
+  };
 
   return (
     <main className="min-h-screen bg-[#f5efe6] px-6 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itemListSchema),
+        }}
+      />
+
       <div className="mx-auto max-w-7xl">
         <Link
           href="/"
@@ -68,6 +132,18 @@ export default async function CategoryPage({
           <p className="mt-6 text-lg leading-8 text-zinc-700">
             {category.description}
           </p>
+
+          <section className="mt-8 rounded-2xl bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-black text-black">
+              Best For
+            </h2>
+
+            <ul className="mt-4 grid gap-3 text-zinc-700 md:grid-cols-3">
+              {category.bestFor.map((useCase) => (
+                <li key={useCase}>{useCase}</li>
+              ))}
+            </ul>
+          </section>
         </header>
 
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -77,9 +153,11 @@ export default async function CategoryPage({
               className="rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
               <Link href={`/books/${book.asin}`}>
-                <img
+                <Image
                   src={`/covers/${book.asin}.jpg`}
                   alt={book.title}
+                  width={800}
+                  height={800}
                   className="aspect-square w-full rounded-2xl object-cover"
                 />
               </Link>

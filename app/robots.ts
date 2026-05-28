@@ -1,10 +1,11 @@
+import { site } from "@/app/data/products";
+
 export default function robots() {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-    sitemap:
-      "https://halloween-coloring-books-finder.vercel.app/sitemap.xml",
+    sitemap: `${site.url}/sitemap.xml`,
   };
 }

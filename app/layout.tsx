@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { site } from "@/app/data/products";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cozyhalloweenbooks.com"),
+  metadataBase: new URL(site.url),
   title: "Cozy Halloween Coloring Books",
   description:
     "Cute, spooky and cozy Halloween coloring books for kids, teens and adults.",
@@ -38,9 +39,38 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    url: site.url,
+    logo: `${site.url}/og-image.jpg`,
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    description: site.description,
+    inLanguage: "en-US",
+  };
+
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
         {children}
         <Analytics />
       </body>

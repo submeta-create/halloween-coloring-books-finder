@@ -1,29 +1,19 @@
 import { MetadataRoute } from "next";
-
-const baseUrl = "https://www.cozyhalloweenbooks.com";
+import { categories, products, site } from "@/app/data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: baseUrl,
+      url: site.url,
       lastModified: new Date(),
     },
-
-    {
-      url: `${baseUrl}/categories/cute-halloween`,
+    ...categories.map((category) => ({
+      url: `${site.url}/categories/${category.slug}`,
       lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/categories/cozy-spooky`,
+    })),
+    ...products.map((book) => ({
+      url: `${site.url}/books/${book.asin}`,
       lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/categories/ghost-coloring-books`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${baseUrl}/categories/bold-easy`,
-      lastModified: new Date(),
-    },
+    })),
   ];
 }
