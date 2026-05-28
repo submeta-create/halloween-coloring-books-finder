@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { categories, products, type Product } from "@/app/data/products";
+import { categories, products, site, type Product } from "@/app/data/products";
 import { getHomepageItemListSchema } from "@/app/lib/schema";
 
 const guideLinks = [
@@ -168,14 +168,32 @@ export default function HomePage() {
   const fallAutumnBooks = filteredProducts.filter((book) =>
     includesAny(book, ["fall", "season", "winter", "christmas"])
   );
-  const homepageItemListSchema = getHomepageItemListSchema(products);
+  const homepageSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: site.name,
+        url: site.url,
+        description: site.description,
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "Organization",
+        name: site.name,
+        url: site.url,
+        logo: `${site.url}/og-image.jpg`,
+      },
+      getHomepageItemListSchema(products),
+    ],
+  };
 
   return (
     <main className="min-h-screen bg-[#f5efe6] px-6 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(homepageItemListSchema),
+          __html: JSON.stringify(homepageSchema),
         }}
       />
 
