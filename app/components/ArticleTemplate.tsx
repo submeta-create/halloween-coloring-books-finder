@@ -234,6 +234,10 @@ export function ArticleTemplate({
                   references, editorial context, Amazon links, and related book
                   suggestions.
                 </p>
+                <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-600">
+                  Affiliate note: some book pages link to Amazon product pages.
+                  As an Amazon Associate, we may earn from qualifying purchases.
+                </p>
               </div>
 
               <Link

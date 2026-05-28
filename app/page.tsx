@@ -5,6 +5,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { categories, products } from "@/app/data/products";
 
+const guideLinks = [
+  {
+    href: "/halloween-coloring-books-for-kids",
+    title: "Halloween Coloring Books for Kids",
+    description: "Friendly spooky books for October activities and gifts.",
+  },
+  {
+    href: "/ghost-coloring-books",
+    title: "Ghost Coloring Books",
+    description: "Cute ghost books with cozy Halloween themes.",
+  },
+  {
+    href: "/pumpkin-coloring-books",
+    title: "Pumpkin Coloring Books",
+    description: "Pumpkin and fall coloring books for Halloween season.",
+  },
+  {
+    href: "/halloween-coloring-book-gift-ideas",
+    title: "Halloween Coloring Book Gift Ideas",
+    description: "Seasonal book picks for baskets, birthdays, and cozy gifts.",
+  },
+];
+
 export default function HomePage() {
   const [search, setSearch] = useState("");
 
@@ -75,6 +98,29 @@ export default function HomePage() {
             <p className="mt-3 text-2xl text-zinc-500">
               Relaxing Coloring
             </p>
+          </div>
+        </section>
+
+        <section className="mt-16">
+          <h2 className="text-4xl font-black text-black">
+            Halloween Coloring Book Guides
+          </h2>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {guideLinks.map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <h3 className="text-xl font-bold text-black">
+                  {guide.title}
+                </h3>
+                <p className="mt-3 leading-7 text-zinc-700">
+                  {guide.description}
+                </p>
+              </Link>
+            ))}
           </div>
         </section>
 

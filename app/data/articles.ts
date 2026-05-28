@@ -226,12 +226,142 @@ export const articles: SeoArticle[] = [
     ],
   },
   {
+    slug: "halloween-coloring-books-for-kids",
+    title: "Halloween Coloring Books for Kids",
+    description:
+      "A curated guide to Halloween coloring books for kids with cute ghosts, pumpkins, bold pages, friendly spooky scenes, and seasonal activity ideas.",
+    intro:
+      "Halloween coloring books for kids are most useful when they feel festive, friendly, and easy to enjoy without becoming too scary. Good kids' Halloween books often include cute ghosts, smiling pumpkins, bats, witches, candy, cozy pets, and bold seasonal shapes that are simple enough for relaxed coloring time. They can work as quiet October activities, classroom-friendly extras, Halloween basket fillers, or creative weekend projects at home. This guide focuses on existing Halloween coloring book picks that connect naturally to kids, beginners, families, and anyone who likes playful spooky artwork. Some books lean cute and cozy, while others are more bold and easy, so parents and gift buyers can choose based on the child's age, patience, and preferred level of detail.",
+    bestFor: [
+      "Kids who enjoy friendly Halloween characters",
+      "Simple October activities for home or classroom use",
+      "Halloween baskets, party favors, and screen-free seasonal gifts",
+    ],
+    featuredAsins: ["B0FK9SYH6W", "B0F7X8W5J3", "B0FC2HL9PN", "B0FGP9HQ24"],
+    pinterest: {
+      titles: [
+        "Halloween Coloring Books for Kids",
+        "Cute Spooky Coloring Books for Children",
+        "Easy Halloween Activity Books for October",
+      ],
+      descriptions: [
+        "A kid-friendly Halloween coloring guide with cute ghosts, pumpkins, bold pages, and simple seasonal activity ideas.",
+        "Save these Halloween coloring book picks for baskets, classroom treats, party favors, and cozy October activities.",
+        "Explore friendly spooky coloring books for kids who like pumpkins, ghosts, bats, witches, and easy Halloween pages.",
+      ],
+      keywords: [
+        "Halloween coloring books for kids",
+        "kids Halloween activities",
+        "cute spooky coloring pages",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Cute Halloween Coloring Books",
+        href: "/categories/cute-halloween",
+        description: "Friendly Halloween books with cute seasonal artwork.",
+      },
+      {
+        label: "Bold and Easy Halloween Coloring Books",
+        href: "/categories/bold-easy",
+        description: "Simple Halloween books with clear, beginner-friendly pages.",
+      },
+      {
+        label: "Cute Halloween Coloring Books Guide",
+        href: "/cute-halloween-coloring-books",
+        description: "A broader guide to cute Halloween coloring book ideas.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What Halloween coloring books are best for kids?",
+        answer:
+          "Kids often do best with Halloween coloring books that use friendly characters, simple shapes, bold outlines, and seasonal themes that are spooky without feeling scary.",
+      },
+      {
+        question: "Are Halloween coloring books good for classroom activities?",
+        answer:
+          "Yes. Simple Halloween coloring books can work well for quiet classroom activities, seasonal art time, or small October rewards.",
+      },
+      {
+        question: "Should I check Amazon before choosing a book?",
+        answer:
+          "Yes. Use Amazon product pages to check current availability, product details, reviews, and shipping information.",
+      },
+    ],
+  },
+  {
+    slug: "ghost-coloring-books",
+    title: "Ghost Coloring Books",
+    description:
+      "Explore ghost coloring books with friendly spooky characters, cute Halloween scenes, pumpkins, cozy autumn details, and seasonal gift ideas.",
+    intro:
+      "Ghost coloring books can be playful, cozy, or lightly spooky depending on the artwork. For many Halloween coloring fans, friendly ghosts are one of the easiest themes to enjoy because they work for kids, teens, and adults without needing scary imagery. A good ghost coloring book may include smiling ghosts, pumpkins, haunted-but-cute houses, bats, candy, fall leaves, cozy drinks, or simple bold shapes for relaxed coloring sessions. This guide focuses on ghost-friendly Halloween coloring books and related pages already available on Cozy Halloween Books. It is designed for people looking for seasonal activity ideas, soft spooky gifts, and cute Halloween pages that feel approachable rather than horror-focused.",
+    bestFor: [
+      "Readers who like friendly ghost characters",
+      "Cute spooky Halloween activities without horror themes",
+      "Halloween baskets, cozy gifts, and simple seasonal coloring",
+    ],
+    featuredAsins: ["B0F5GXK4ZZ", "B0F7X8W5J3", "B0FK9SYH6W", "B0FC2HL9PN"],
+    pinterest: {
+      titles: [
+        "Ghost Coloring Books for Halloween",
+        "Cute Ghost Coloring Book Ideas",
+        "Friendly Spooky Coloring Books with Ghosts",
+      ],
+      descriptions: [
+        "A ghost coloring book guide with friendly spooky characters, pumpkins, cozy scenes, and approachable Halloween artwork.",
+        "Save these ghost coloring book ideas for Halloween baskets, classroom activities, and relaxing October coloring.",
+        "Explore cute spooky books with ghosts, bats, pumpkins, and soft seasonal themes for kids, teens, and adults.",
+      ],
+      keywords: [
+        "ghost coloring books",
+        "cute ghost coloring pages",
+        "friendly Halloween coloring",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Ghost Coloring Books Category",
+        href: "/categories/ghost-coloring-books",
+        description: "A focused collection of ghost-friendly Halloween books.",
+      },
+      {
+        label: "Cute Ghost Coloring Books",
+        href: "/cute-ghost-coloring-books",
+        description: "A guide to friendly ghost coloring book ideas.",
+      },
+      {
+        label: "Spooky Snuggles Halloween Coloring Book",
+        href: "/books/B0F5GXK4ZZ",
+        description: "A cozy ghost-forward Halloween coloring book pick.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Are ghost coloring books scary?",
+        answer:
+          "Not always. Many ghost coloring books use friendly characters, cute faces, pumpkins, and cozy Halloween settings instead of scary horror imagery.",
+      },
+      {
+        question: "Who are ghost coloring books best for?",
+        answer:
+          "They can work for kids, teens, and adults who enjoy soft spooky Halloween themes and friendly seasonal characters.",
+      },
+      {
+        question: "Do these guide pages copy Amazon reviews?",
+        answer:
+          "No. Cozy Halloween Books does not copy Amazon reviews, star ratings, or review counts. Check Amazon for current details.",
+      },
+    ],
+  },
+  {
     slug: "pumpkin-coloring-books",
     title: "Pumpkin Coloring Books",
     description:
       "Explore pumpkin coloring books and Halloween books with pumpkins, jack-o-lanterns, cozy fall scenes, and seasonal gift appeal.",
     intro:
-      "Pumpkin coloring books are useful for both Halloween and broader fall coloring themes. They can include jack-o-lanterns, pumpkin patches, cozy drinks, autumn leaves, friendly ghosts, and seasonal decorations.",
+      "Pumpkin coloring books are useful for both Halloween and broader fall coloring themes because pumpkins fit many seasonal moods. Some books focus on jack-o-lanterns and spooky October scenes, while others lean into cozy autumn coloring styles with fall leaves, warm drinks, pumpkin patches, cute animals, and friendly ghosts. This makes pumpkin books flexible for kids' activities, adult relaxation, fall gift baskets, classroom projects, and weekend coloring time. A pumpkin coloring page can be simple and bold, detailed and decorative, cute and playful, or cozy and calm. This guide highlights existing Halloween coloring book pages that include pumpkin-friendly seasonal appeal, with internal links to related books and categories so readers can move from a broad theme to specific book picks.",
     bestFor: [
       "Fall coloring activities with Halloween overlap",
       "Kids and adults who enjoy pumpkins and autumn scenes",
@@ -522,6 +652,21 @@ export const articles: SeoArticle[] = [
         description: "The main category for cute and friendly Halloween books.",
       },
       {
+        label: "Halloween Coloring Books for Kids",
+        href: "/halloween-coloring-books-for-kids",
+        description: "Kid-friendly books with cute spooky seasonal themes.",
+      },
+      {
+        label: "Ghost Coloring Books",
+        href: "/ghost-coloring-books",
+        description: "Friendly ghost coloring books for Halloween activities.",
+      },
+      {
+        label: "Pumpkin Coloring Books",
+        href: "/pumpkin-coloring-books",
+        description: "Pumpkin and fall coloring books for October.",
+      },
+      {
         label: "Ghost Coloring Books",
         href: "/categories/ghost-coloring-books",
         description: "Friendly ghost-themed Halloween coloring books.",
@@ -650,6 +795,21 @@ export const articles: SeoArticle[] = [
         label: "Cute Halloween Coloring Books",
         href: "/categories/cute-halloween",
         description: "Friendly seasonal books for gift baskets.",
+      },
+      {
+        label: "Halloween Coloring Books for Kids",
+        href: "/halloween-coloring-books-for-kids",
+        description: "Simple Halloween coloring book ideas for kids.",
+      },
+      {
+        label: "Ghost Coloring Books",
+        href: "/ghost-coloring-books",
+        description: "Cute ghost coloring books for Halloween baskets.",
+      },
+      {
+        label: "Pumpkin Coloring Books",
+        href: "/pumpkin-coloring-books",
+        description: "Pumpkin-themed books for fall gift ideas.",
       },
       {
         label: "Bold and Easy Halloween Coloring Books",
