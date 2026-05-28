@@ -1,0 +1,41 @@
+# Cozy Halloween Books
+
+URL: https://www.cozyhalloweenbooks.com
+
+Cozy Halloween Books is a curated site for Halloween coloring books for kids, teens, and adults. The site focuses on cozy spooky themes, cute Halloween artwork, seasonal gifts, relaxing coloring activities, and easy-to-browse book recommendations.
+
+Curator and author brand: Ella Tarling
+
+## Main Sections
+
+- Homepage: https://www.cozyhalloweenbooks.com
+- Categories: themed collections of Halloween coloring books
+- Book detail pages: individual book pages with title, cover image, ASIN reference, Amazon link, editorial notes, best-for sections, and related books
+
+## Important Categories
+
+- Cute Halloween Coloring Books: https://www.cozyhalloweenbooks.com/categories/cute-halloween
+- Cozy Spooky Coloring Books: https://www.cozyhalloweenbooks.com/categories/cozy-spooky
+- Ghost Coloring Books: https://www.cozyhalloweenbooks.com/categories/ghost-coloring-books
+- Bold & Easy Coloring Books: https://www.cozyhalloweenbooks.com/categories/bold-easy
+
+## Page Structure
+
+Book detail pages include:
+
+- Book title
+- Book cover image
+- ASIN reference for transparency
+- Link to Amazon
+- Editorial note
+- Best-for recommendations
+- Popular themes
+- Gift use cases
+- Related books
+
+Category pages group books by theme and include short descriptions, best-for context, and links to matching book detail pages.
+
+## Discovery Links
+
+- Sitemap: https://www.cozyhalloweenbooks.com/sitemap.xml
+- Robots: https://www.cozyhalloweenbooks.com/robots.txt
