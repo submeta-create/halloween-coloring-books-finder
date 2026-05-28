@@ -24,6 +24,14 @@ export function getBookGenres(book: Product) {
 
 export function getBookSchema(book: Product) {
   const tags = getProductTags(book);
+  const keywords = new Set([
+    "Halloween coloring book",
+    "cozy coloring book",
+    "spooky coloring book",
+    "kids coloring book",
+    "adult coloring book",
+    ...tags,
+  ]);
 
   return {
     "@type": "Book",
@@ -31,6 +39,11 @@ export function getBookSchema(book: Product) {
     author: {
       "@type": "Person",
       name: "Ella Tarling",
+    },
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "ASIN",
+      value: book.asin,
     },
     image: `${site.url}/covers/${book.asin}.jpg`,
     url: `${site.url}/books/${book.asin}`,
@@ -41,7 +54,7 @@ export function getBookSchema(book: Product) {
     },
     description: getBookDescription(book),
     genre: getBookGenres(book),
-    keywords: tags.join(", "),
+    keywords: Array.from(keywords).join(", "),
     inLanguage: "en",
     isFamilyFriendly: true,
   };
