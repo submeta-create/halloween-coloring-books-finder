@@ -165,6 +165,21 @@ export function ArticleTemplate({
           <span className="text-black">{article.title}</span>
         </nav>
 
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="/"
+            className="rounded-2xl bg-black px-5 py-3 font-semibold text-white"
+          >
+            Back Home
+          </Link>
+          <Link
+            href="/categories/cute-halloween"
+            className="rounded-2xl border border-zinc-300 bg-white px-5 py-3 font-semibold"
+          >
+            Browse Categories
+          </Link>
+        </div>
+
         <article className="mt-10">
           <header className="max-w-4xl">
             <p className="text-sm font-bold uppercase tracking-widest text-orange-600">
@@ -345,6 +360,21 @@ export function ArticleTemplate({
                   {related.title}
                 </Link>
               ))}
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/"
+                className="rounded-2xl bg-black px-5 py-3 font-semibold text-white"
+              >
+                Back Home
+              </Link>
+              <Link
+                href="/categories/cute-halloween"
+                className="rounded-2xl border border-zinc-300 bg-white px-5 py-3 font-semibold"
+              >
+                Browse Categories
+              </Link>
             </div>
           </section>
         </article>
