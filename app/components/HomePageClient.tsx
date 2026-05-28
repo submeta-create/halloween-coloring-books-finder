@@ -37,6 +37,11 @@ const guideLinks = [
     description: "Soft spooky coloring books for relaxing fall evenings.",
   },
   {
+    href: "/spooky-animal-coloring-books",
+    title: "Spooky Animal Coloring Books",
+    description: "Cute spooky pets and animals for Halloween coloring.",
+  },
+  {
     href: "/halloween-activity-books",
     title: "Halloween Activity Books",
     description: "Coloring-focused activity ideas for kids and families.",
@@ -97,6 +102,10 @@ const themeLinks = [
   {
     href: "/bold-and-easy-halloween-coloring-books",
     title: "Bold and Easy Halloween Coloring Books",
+  },
+  {
+    href: "/spooky-animal-coloring-books",
+    title: "Spooky Animal Coloring Books",
   },
   {
     href: "/halloween-coloring-books-for-kids",

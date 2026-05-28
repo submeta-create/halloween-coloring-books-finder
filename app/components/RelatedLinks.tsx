@@ -8,7 +8,7 @@ type RelatedLinksProps = {
 export function RelatedLinks({ links }: RelatedLinksProps) {
   return (
     <section className="mt-16">
-      <h2 className="text-4xl font-black text-black">Related Themes</h2>
+      <h2 className="text-4xl font-black text-black">Related Guides</h2>
 
       <div className="mt-8 grid gap-5 md:grid-cols-3">
         {links.map((link) => (

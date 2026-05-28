@@ -602,14 +602,29 @@ export const articles: SeoArticle[] = [
     },
     relatedThemes: [
       {
-        label: "Bold and Easy Halloween Coloring Books",
-        href: "/categories/bold-easy",
-        description: "A category for simple, clear Halloween coloring books.",
+        label: "Ghost Coloring Books",
+        href: "/ghost-coloring-books",
+        description: "Friendly ghost coloring books with simple spooky-season appeal.",
+      },
+      {
+        label: "Pumpkin Coloring Books",
+        href: "/pumpkin-coloring-books",
+        description: "Pumpkin and fall coloring books with beginner-friendly themes.",
+      },
+      {
+        label: "Witch Coloring Books",
+        href: "/witch-coloring-books",
+        description: "Cute witch coloring books with hats, potions, pumpkins, and cats.",
       },
       {
         label: "Cute Halloween Coloring Books",
-        href: "/categories/cute-halloween",
+        href: "/cute-halloween-coloring-books",
         description: "Friendly Halloween designs with cute seasonal details.",
+      },
+      {
+        label: "Cozy Spooky Coloring Books",
+        href: "/cozy-spooky-coloring-books",
+        description: "Relaxing Halloween books with soft spooky moods.",
       },
       {
         label: "Halloween Bold and Easy Coloring Book",
@@ -632,6 +647,89 @@ export const articles: SeoArticle[] = [
         question: "Do these pages include Amazon review counts?",
         answer:
           "No. Review counts are not displayed unless they come from an approved Amazon API later.",
+      },
+    ],
+  },
+  {
+    slug: "spooky-animal-coloring-books",
+    title: "Spooky Animal Coloring Books",
+    description:
+      "Explore spooky animal coloring books with Halloween pets, cute koalas, hippos, dachshunds, cozy creatures, pumpkins, ghosts, and seasonal scenes.",
+    intro:
+      "Spooky animal coloring books bring Halloween themes into friendly pet and creature scenes. This guide focuses on existing Halloween coloring books with koalas, hippos, dachshunds, cozy pets, cute spooky animals, pumpkins, ghosts, and playful autumn details for kids, teens, adults, gifts, and relaxed seasonal coloring.",
+    bestFor: [
+      "Readers who like cute Halloween animals and pets",
+      "Kids, teens, and adults who prefer friendly spooky art",
+      "Halloween baskets, cozy gifts, and screen-free fall activities",
+    ],
+    featuredAsins: [
+      "B0H1N6HD2P",
+      "B0H1N981H3",
+      "B0FMPXV23H",
+      "B0GZNZ1GT8",
+      "B0FT6Q7PVJ",
+      "B0GYYPLVF2",
+      "B0GYZDZT9T",
+    ],
+    pinterest: {
+      titles: [
+        "Spooky Animal Coloring Books",
+        "Cute Halloween Animal Coloring Book Ideas",
+        "Spooky Pet Coloring Books for Halloween",
+      ],
+      descriptions: [
+        "A spooky animal coloring book guide with koalas, hippos, dachshunds, pets, pumpkins, ghosts, and cute Halloween scenes.",
+        "Save these Halloween animal coloring books for baskets, fall gifts, cozy activities, and friendly spooky coloring time.",
+        "Explore existing spooky pet and animal coloring books with soft Halloween themes for kids, teens, and adults.",
+      ],
+      keywords: [
+        "spooky animal coloring books",
+        "Halloween animal coloring books",
+        "spooky pet coloring books",
+      ],
+    },
+    relatedThemes: [
+      {
+        label: "Ghost Coloring Books",
+        href: "/ghost-coloring-books",
+        description: "Friendly ghost books that pair well with spooky animals.",
+      },
+      {
+        label: "Pumpkin Coloring Books",
+        href: "/pumpkin-coloring-books",
+        description: "Pumpkin and fall coloring books for seasonal animal scenes.",
+      },
+      {
+        label: "Witch Coloring Books",
+        href: "/witch-coloring-books",
+        description: "Cute witch books with cats, pumpkins, potions, and cozy magic.",
+      },
+      {
+        label: "Cute Halloween Coloring Books",
+        href: "/cute-halloween-coloring-books",
+        description: "Friendly Halloween books with animals, ghosts, and pumpkins.",
+      },
+      {
+        label: "Cozy Spooky Coloring Books",
+        href: "/cozy-spooky-coloring-books",
+        description: "Soft spooky books for cozy seasonal coloring sessions.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What are spooky animal coloring books?",
+        answer:
+          "Spooky animal coloring books combine Halloween themes with cute animals, pets, cozy creatures, pumpkins, ghosts, bats, costumes, and friendly seasonal scenes.",
+      },
+      {
+        question: "Are spooky animal coloring books good for kids?",
+        answer:
+          "Yes. Many spooky animal books use friendly Halloween artwork, making them approachable for kids while still appealing to teens and adults who like cute seasonal designs.",
+      },
+      {
+        question: "Which animals appear in these Halloween coloring books?",
+        answer:
+          "This collection includes existing books with koalas, hippos, dachshunds, pets, and cozy spooky animal themes. Check each book page for current product details.",
       },
     ],
   },
