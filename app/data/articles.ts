@@ -691,3 +691,28 @@ export function getArticleFeaturedBooks(article: SeoArticle) {
     .map((asin) => products.find((product) => product.asin === asin))
     .filter((product) => product !== undefined);
 }
+
+export function getRelatedArticles(article: SeoArticle, limit = 3) {
+  const sourceText = `${article.title} ${article.description} ${article.intro}`
+    .toLowerCase()
+    .split(/\W+/)
+    .filter((word) => word.length > 4);
+
+  return articles
+    .filter((candidate) => candidate.slug !== article.slug)
+    .map((candidate) => {
+      const candidateText =
+        `${candidate.title} ${candidate.description} ${candidate.intro}`.toLowerCase();
+      const score = sourceText.filter((word) =>
+        candidateText.includes(word)
+      ).length;
+
+      return { candidate, score };
+    })
+    .sort(
+      (a, b) =>
+        b.score - a.score || a.candidate.title.localeCompare(b.candidate.title)
+    )
+    .slice(0, limit)
+    .map(({ candidate }) => candidate);
+}
