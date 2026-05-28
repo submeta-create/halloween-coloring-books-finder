@@ -211,6 +211,15 @@ export default async function BookPage({
               </div>
             </div>
 
+            <a
+              href={`https://www.amazon.com/dp/${book.asin}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-block rounded-2xl bg-black px-8 py-5 text-xl font-bold text-white"
+            >
+              View on Amazon
+            </a>
+
             <section className="mt-10 grid gap-6 md:grid-cols-2">
               <div className="rounded-2xl border border-orange-100 bg-white p-5 shadow-sm">
                 <h2 className="text-xl font-semibold text-gray-900">
@@ -263,15 +272,6 @@ export default async function BookPage({
                 </p>
               </div>
             </section>
-
-            <a
-              href={`https://www.amazon.com/dp/${book.asin}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-10 inline-block rounded-2xl bg-black px-8 py-5 text-xl font-bold text-white"
-            >
-              View on Amazon
-            </a>
           </div>
         </div>
 
@@ -291,7 +291,7 @@ export default async function BookPage({
             {relatedBooks.map((related) => (
               <div
                 key={related.asin}
-                className="rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                className="flex min-h-[520px] flex-col rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <Link href={`/books/${related.asin}`}>
                   <Image
@@ -309,7 +309,7 @@ export default async function BookPage({
 
                 <p className="mt-3 text-zinc-500">ASIN: {related.asin}</p>
 
-                <div className="mt-6 flex gap-3">
+                <div className="mt-auto flex gap-3 pt-6">
                   <a
                     href={`https://www.amazon.com/dp/${related.asin}`}
                     target="_blank"

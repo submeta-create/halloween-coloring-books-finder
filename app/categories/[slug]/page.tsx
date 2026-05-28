@@ -150,7 +150,7 @@ export default async function CategoryPage({
           {filteredBooks.map((book) => (
             <div
               key={book.asin}
-              className="rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="flex min-h-[520px] flex-col rounded-3xl bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
               <Link href={`/books/${book.asin}`}>
                 <Image
@@ -170,7 +170,7 @@ export default async function CategoryPage({
                 ASIN: {book.asin}
               </p>
 
-              <div className="mt-6 flex gap-3">
+              <div className="mt-auto flex gap-3 pt-6">
                 <a
                   href={`https://www.amazon.com/dp/${book.asin}`}
                   target="_blank"
