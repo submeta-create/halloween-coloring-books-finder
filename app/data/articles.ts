@@ -216,7 +216,7 @@ export const articles: SeoArticle[] = [
       {
         question: "Are cozy Halloween coloring books only for adults?",
         answer:
-          "No. Many cozy Halloween books can appeal to kids, teens, and adults, depending on the art style and page complexity.",
+          "No. Many cozy Halloween books can appeal to kids, teens, and adults, depending on the artwork complexity and page format.",
       },
       {
         question: "How should I choose a cozy Halloween coloring book?",
@@ -291,12 +291,12 @@ export const articles: SeoArticle[] = [
     ],
   },
   {
-    slug: "books-similar-to-coco-wyo-style",
-    title: "Books Similar to Coco Wyo Style",
+    slug: "cozy-autumn-coloring-styles",
+    title: "Cozy Autumn Coloring Styles",
     description:
-      "Find cozy, cute, and bold Halloween coloring books for readers who enjoy simple seasonal coloring styles and playful spooky themes.",
+      "Find cozy spooky coloring books, cute cozy Halloween books, and relaxing spooky coloring pages with approachable autumn themes.",
     intro:
-      "Readers searching for books similar to Coco Wyo style often want cute characters, bold outlines, simple scenes, cozy themes, and easy-to-finish pages. This guide focuses on Halloween coloring books with that kind of approachable, playful seasonal feel without claiming any affiliation.",
+      "Cozy autumn coloring styles often include cute characters, bold outlines, simple scenes, relaxing spooky coloring pages, and easy-to-finish seasonal artwork. This guide focuses on Halloween coloring books with an approachable, playful autumn feel.",
     bestFor: [
       "Fans of cute, bold, easy-to-color seasonal pages",
       "Coloring sessions that feel relaxing rather than complex",
@@ -339,14 +339,14 @@ export const articles: SeoArticle[] = [
     ],
     faqs: [
       {
-        question: "Is this page affiliated with Coco Wyo?",
+        question: "What kinds of books fit cozy autumn coloring styles?",
         answer:
-          "No. This page is not affiliated with Coco Wyo. It is a neutral guide for readers looking for cozy, cute, bold, and simple Halloween coloring book styles.",
+          "These books usually include cozy spooky coloring books, cute cozy Halloween books, friendly characters, bold outlines, and relaxing seasonal pages.",
       },
       {
-        question: "What does similar style mean here?",
+        question: "What does cozy autumn coloring style mean here?",
         answer:
-          "It means readers may be looking for approachable page layouts, cute characters, bold outlines, cozy themes, and easy seasonal coloring sessions.",
+          "It means approachable page layouts, cute characters, bold outlines, cozy autumn coloring styles, and easy seasonal coloring sessions.",
       },
       {
         question: "Are ratings or reviews copied from Amazon?",
@@ -671,7 +671,7 @@ export const articles: SeoArticle[] = [
       {
         question: "Who can receive a Halloween coloring book gift?",
         answer:
-          "Depending on the book style, Halloween coloring books can work for kids, teens, adults, beginners, and cozy spooky coloring fans.",
+          "Depending on the book theme, Halloween coloring books can work for kids, teens, adults, beginners, and cozy spooky coloring fans.",
       },
       {
         question: "Should I check Amazon before buying?",

@@ -13,8 +13,8 @@ type ArticleTemplateProps = {
 
 const introLinkRules = [
   {
-    phrase: "Coco Wyo style",
-    href: "/books-similar-to-coco-wyo-style",
+    phrase: "cozy autumn coloring styles",
+    href: "/cozy-autumn-coloring-styles",
   },
   {
     phrase: "Halloween coloring books for adults",
