@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import { TrustBox } from "@/app/components/TrustBox";
 import {
   getProductTags,
   getRelatedProducts,
@@ -192,6 +193,8 @@ export default async function BookPage({
               screen-free time, and fun coloring moments for kids, teens, and
               adults.
             </p>
+
+            <TrustBox />
 
             <div className="mt-8 flex flex-wrap gap-4">
               <div className="rounded-full bg-white px-5 py-3 font-semibold shadow-sm">
