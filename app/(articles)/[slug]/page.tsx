@@ -7,6 +7,7 @@ import {
   getArticleFeaturedBooks,
 } from "@/app/data/articles";
 import { site } from "@/app/data/products";
+import { getBookSchema } from "@/app/lib/schema";
 
 export function generateStaticParams() {
   return articles.map((article) => ({
@@ -64,6 +65,7 @@ export default async function ArticlePage({
   }
 
   const featuredBooks = getArticleFeaturedBooks(article);
+  const pageUrl = `${site.url}/${article.slug}`;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -79,7 +81,7 @@ export default async function ArticlePage({
         "@type": "ListItem",
         position: 2,
         name: article.title,
-        item: `${site.url}/${article.slug}`,
+        item: pageUrl,
       },
     ],
   };
@@ -94,11 +96,48 @@ export default async function ArticlePage({
       position: index + 1,
       url: `${site.url}/books/${book.asin}`,
       name: book.title,
+      item: getBookSchema(book),
+    })),
+  };
+
+  const collectionPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: article.title,
+    headline: article.title,
+    description: article.description,
+    url: pageUrl,
+    isPartOf: {
+      "@type": "WebSite",
+      name: site.name,
+      url: site.url,
+    },
+    about: article.pinterest.keywords,
+    mainEntity: itemListSchema,
+    inLanguage: "en-US",
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: article.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
     })),
   };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collectionPageSchema),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -109,6 +148,12 @@ export default async function ArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(itemListSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
         }}
       />
       <ArticleTemplate article={article} featuredBooks={featuredBooks} />

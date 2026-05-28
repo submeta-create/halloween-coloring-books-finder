@@ -42,7 +42,7 @@ const introLinkRules = [
   },
   {
     phrase: "ghost",
-    href: "/cute-ghost-coloring-books",
+    href: "/ghost-coloring-books",
   },
   {
     phrase: "gift",

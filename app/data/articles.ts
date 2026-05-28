@@ -322,14 +322,24 @@ export const articles: SeoArticle[] = [
     },
     relatedThemes: [
       {
-        label: "Ghost Coloring Books Category",
-        href: "/categories/ghost-coloring-books",
-        description: "A focused collection of ghost-friendly Halloween books.",
+        label: "Cute Halloween Coloring Books",
+        href: "/cute-halloween-coloring-books",
+        description: "Friendly Halloween books with ghosts, pumpkins, and cozy scenes.",
       },
       {
         label: "Cute Ghost Coloring Books",
         href: "/cute-ghost-coloring-books",
         description: "A guide to friendly ghost coloring book ideas.",
+      },
+      {
+        label: "Pumpkin Coloring Books",
+        href: "/pumpkin-coloring-books",
+        description: "Pumpkin and fall coloring books for October activities.",
+      },
+      {
+        label: "Cozy Spooky Coloring Books",
+        href: "/cozy-spooky-coloring-books",
+        description: "Soft spooky Halloween books for relaxing seasonal coloring.",
       },
       {
         label: "Spooky Snuggles Halloween Coloring Book",
@@ -388,13 +398,23 @@ export const articles: SeoArticle[] = [
     relatedThemes: [
       {
         label: "Cute Halloween Coloring Books",
-        href: "/categories/cute-halloween",
+        href: "/cute-halloween-coloring-books",
         description: "Cute Halloween designs with pumpkins and friendly scenes.",
       },
       {
         label: "Cozy Spooky Coloring Books",
-        href: "/categories/cozy-spooky",
+        href: "/cozy-spooky-coloring-books",
         description: "Relaxing Halloween and autumn coloring books.",
+      },
+      {
+        label: "Ghost Coloring Books",
+        href: "/ghost-coloring-books",
+        description: "Friendly ghost coloring books that pair naturally with pumpkins.",
+      },
+      {
+        label: "Witch Coloring Books",
+        href: "/witch-coloring-books",
+        description: "Cute witch books with pumpkins, cats, hats, and cozy scenes.",
       },
       {
         label: "Little Cozy Halloween Coloring Book",
@@ -647,11 +667,6 @@ export const articles: SeoArticle[] = [
     },
     relatedThemes: [
       {
-        label: "Cute Halloween Coloring Books",
-        href: "/categories/cute-halloween",
-        description: "The main category for cute and friendly Halloween books.",
-      },
-      {
         label: "Halloween Coloring Books for Kids",
         href: "/halloween-coloring-books-for-kids",
         description: "Kid-friendly books with cute spooky seasonal themes.",
@@ -667,9 +682,14 @@ export const articles: SeoArticle[] = [
         description: "Pumpkin and fall coloring books for October.",
       },
       {
-        label: "Ghost Coloring Books",
-        href: "/categories/ghost-coloring-books",
-        description: "Friendly ghost-themed Halloween coloring books.",
+        label: "Witch Coloring Books",
+        href: "/witch-coloring-books",
+        description: "Cute witch coloring books with cozy Halloween scenes.",
+      },
+      {
+        label: "Cozy Spooky Coloring Books",
+        href: "/cozy-spooky-coloring-books",
+        description: "Relaxing spooky-season books with a soft autumn mood.",
       },
       {
         label: "Spooky Snuggles Halloween Coloring Book",
@@ -727,14 +747,24 @@ export const articles: SeoArticle[] = [
     },
     relatedThemes: [
       {
-        label: "Cozy Spooky Coloring Books",
-        href: "/categories/cozy-spooky",
-        description: "The main category for soft spooky seasonal books.",
+        label: "Cute Halloween Coloring Books",
+        href: "/cute-halloween-coloring-books",
+        description: "Friendly Halloween books with cute artwork.",
       },
       {
-        label: "Cute Halloween Coloring Books",
-        href: "/categories/cute-halloween",
-        description: "Friendly Halloween books with cute artwork.",
+        label: "Ghost Coloring Books",
+        href: "/ghost-coloring-books",
+        description: "Friendly ghost coloring books with soft spooky themes.",
+      },
+      {
+        label: "Pumpkin Coloring Books",
+        href: "/pumpkin-coloring-books",
+        description: "Pumpkin and autumn coloring books for cozy October activities.",
+      },
+      {
+        label: "Witch Coloring Books",
+        href: "/witch-coloring-books",
+        description: "Cute magical Halloween books with cozy witch themes.",
       },
       {
         label: "Cozy Spooky Coloring Book",
@@ -871,6 +901,16 @@ export const articles: SeoArticle[] = [
       ],
     },
     relatedThemes: [
+      {
+        label: "Ghost Coloring Books",
+        href: "/ghost-coloring-books",
+        description: "Friendly ghost books for soft spooky Halloween coloring.",
+      },
+      {
+        label: "Pumpkin Coloring Books",
+        href: "/pumpkin-coloring-books",
+        description: "Pumpkin and autumn books that pair with witch themes.",
+      },
       {
         label: "Cute Halloween Coloring Books",
         href: "/cute-halloween-coloring-books",

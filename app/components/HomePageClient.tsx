@@ -32,6 +32,11 @@ const guideLinks = [
     description: "Cozy ghosts, pumpkins, animals, and friendly spooky art.",
   },
   {
+    href: "/cozy-spooky-coloring-books",
+    title: "Cozy Spooky Coloring Books",
+    description: "Soft spooky coloring books for relaxing fall evenings.",
+  },
+  {
     href: "/halloween-activity-books",
     title: "Halloween Activity Books",
     description: "Coloring-focused activity ideas for kids and families.",
@@ -60,6 +65,50 @@ const secondaryGuideLinks = [
     href: "/halloween-coloring-book-gift-ideas",
     title: "Halloween Coloring Book Gift Ideas",
     description: "Seasonal book picks for baskets, birthdays, and cozy gifts.",
+  },
+  {
+    href: "/cozy-spooky-coloring-books",
+    title: "Cozy Spooky Coloring Books",
+    description: "Relaxing Halloween coloring books with soft spooky themes.",
+  },
+];
+
+const themeLinks = [
+  {
+    href: "/ghost-coloring-books",
+    title: "Ghost Coloring Books",
+  },
+  {
+    href: "/pumpkin-coloring-books",
+    title: "Pumpkin Coloring Books",
+  },
+  {
+    href: "/witch-coloring-books",
+    title: "Witch Coloring Books",
+  },
+  {
+    href: "/cute-halloween-coloring-books",
+    title: "Cute Halloween Coloring Books",
+  },
+  {
+    href: "/cozy-spooky-coloring-books",
+    title: "Cozy Spooky Coloring Books",
+  },
+  {
+    href: "/bold-and-easy-halloween-coloring-books",
+    title: "Bold and Easy Halloween Coloring Books",
+  },
+  {
+    href: "/halloween-coloring-books-for-kids",
+    title: "Halloween Coloring Books for Kids",
+  },
+  {
+    href: "/best-halloween-coloring-books-for-adults",
+    title: "Halloween Coloring Books for Adults",
+  },
+  {
+    href: "/halloween-coloring-book-gift-ideas",
+    title: "Halloween Coloring Book Gift Ideas",
   },
 ];
 
@@ -254,6 +303,24 @@ export function HomePageClient() {
               <p className="mt-2 text-sm leading-6 text-zinc-600">
                 {guide.description}
               </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-8 rounded-3xl bg-white p-6 shadow-sm">
+        <h2 className="text-3xl font-black text-black">
+          Explore Halloween Coloring Book Themes
+        </h2>
+
+        <div className="mt-5 flex flex-wrap gap-3">
+          {themeLinks.map((theme) => (
+            <Link
+              key={theme.href}
+              href={theme.href}
+              className="rounded-full border border-zinc-200 px-4 py-2 text-sm font-semibold text-zinc-800 hover:border-zinc-400"
+            >
+              {theme.title}
             </Link>
           ))}
         </div>
