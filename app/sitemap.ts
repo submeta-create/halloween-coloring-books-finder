@@ -13,6 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: `${site.url}/about`,
+      lastModified: new Date(),
+    },
+    {
       url: `${site.url}/privacy`,
       lastModified: new Date(),
     },

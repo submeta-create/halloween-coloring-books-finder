@@ -38,7 +38,15 @@ export function getBookSchema(book: Product) {
     name: book.title,
     author: {
       "@type": "Person",
-      name: "Ella Tarling",
+      name: site.author.name,
+      description: site.author.description,
+      url: `${site.url}/about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+      logo: `${site.url}/og-image.jpg`,
     },
     identifier: {
       "@type": "PropertyValue",

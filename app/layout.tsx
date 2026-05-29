@@ -49,6 +49,13 @@ export default function RootLayout({
     name: site.name,
     url: site.url,
     logo: `${site.url}/og-image.jpg`,
+    email: site.email,
+    description: site.description,
+    founder: {
+      "@type": "Person",
+      name: site.author.name,
+      url: `${site.url}/about`,
+    },
   };
 
   const websiteSchema = {
@@ -58,6 +65,11 @@ export default function RootLayout({
     url: site.url,
     description: site.description,
     inLanguage: "en-US",
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+    },
   };
 
   return (

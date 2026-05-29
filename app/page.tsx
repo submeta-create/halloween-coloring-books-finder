@@ -18,6 +18,8 @@ export default function HomePage() {
         name: site.name,
         url: site.url,
         logo: `${site.url}/og-image.jpg`,
+        email: site.email,
+        description: site.description,
       },
       getHomepageItemListSchema(products),
     ],

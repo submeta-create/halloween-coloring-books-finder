@@ -250,6 +250,18 @@ export function HomePageClient() {
           kids, teens, and adults.
         </p>
 
+        <p className="mt-5 max-w-3xl leading-8 text-zinc-600">
+          Curated by{" "}
+          <Link
+            href="/about"
+            className="font-semibold text-black underline decoration-orange-300 underline-offset-4 hover:decoration-orange-500"
+          >
+            Cozy Halloween Books
+          </Link>{" "}
+          with topic hubs for gift ideas, friendly spooky themes, and seasonal
+          coloring discovery.
+        </p>
+
         <input
           type="text"
           placeholder="Search spooky books..."

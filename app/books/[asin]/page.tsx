@@ -6,10 +6,13 @@ import { TrustSignal } from "@/app/components/TrustSignal";
 import { getAmazonUrl } from "@/app/lib/amazon";
 import { getBookSchema } from "@/app/lib/schema";
 import {
+  categories,
+  getProductTags,
   getRelatedProducts,
   products,
   site,
 } from "@/app/data/products";
+import { articles } from "@/app/data/articles";
 
 export async function generateMetadata({
   params,
@@ -75,7 +78,24 @@ export default async function BookPage({
     );
   }
 
-  const relatedBooks = getRelatedProducts(book);
+  const relatedBooks = getRelatedProducts(book, 8);
+  const bookTags = getProductTags(book);
+  const relatedCategories = categories
+    .filter((category) => bookTags.includes(category.slug))
+    .slice(0, 3);
+  const relatedGuides = articles
+    .map((article) => {
+      const source = `${book.title} ${bookTags.join(" ")}`.toLowerCase();
+      const target = `${article.title} ${article.description} ${article.intro}`.toLowerCase();
+      const score = source
+        .split(/\W+/)
+        .filter((word) => word.length > 4 && target.includes(word)).length;
+
+      return { article, score };
+    })
+    .sort((a, b) => b.score - a.score || a.article.title.localeCompare(b.article.title))
+    .slice(0, 4)
+    .map(({ article }) => article);
   const bookSchema = {
     "@context": "https://schema.org",
     ...getBookSchema(book),
@@ -264,9 +284,81 @@ export default async function BookPage({
           </div>
         </div>
 
+        <section className="mt-20 grid gap-8 lg:grid-cols-3">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm lg:col-span-2">
+            <h2 className="text-3xl font-black text-black">
+              Editorial Context
+            </h2>
+            <p className="mt-4 leading-8 text-zinc-700">
+              This page is part of {site.name}, an editorial Halloween coloring
+              book library curated by {site.author.name}. Book pages are built
+              around real ASIN references, internal theme clusters, and clear
+              links to related guides instead of copied Amazon reviews or fake
+              rating snippets.
+            </p>
+            <Link
+              href="/about"
+              className="mt-5 inline-block rounded-2xl border border-zinc-300 px-5 py-3 font-semibold"
+            >
+              About {site.name}
+            </Link>
+          </div>
+
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+            <h2 className="text-3xl font-black text-black">
+              Theme Hubs
+            </h2>
+            <div className="mt-5 grid gap-3">
+              {(relatedCategories.length > 0 ? relatedCategories : categories.slice(0, 3)).map(
+                (category) => (
+                  <Link
+                    key={category.slug}
+                    href={`/categories/${category.slug}`}
+                    className="rounded-xl border border-zinc-200 px-4 py-3 font-semibold text-zinc-800 hover:border-zinc-400"
+                  >
+                    {category.title}
+                  </Link>
+                )
+              )}
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-16 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <h2 className="text-3xl font-black text-black">
+            Related Guides
+          </h2>
+          <p className="mt-3 max-w-3xl leading-7 text-zinc-700">
+            Use these guides to compare nearby Halloween coloring book themes,
+            gift use cases, and audience-focused recommendations.
+          </p>
+
+          <div className="mt-5 grid gap-3 md:grid-cols-2">
+            {relatedGuides.map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/${guide.slug}`}
+                className="rounded-xl border border-zinc-200 px-4 py-3 hover:border-zinc-400"
+              >
+                <h3 className="font-bold text-zinc-900">{guide.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-600">
+                  {guide.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="mt-24">
           <div className="mb-10 flex items-center justify-between">
-            <h2 className="text-5xl font-black">Related Halloween Books</h2>
+            <div>
+              <h2 className="text-5xl font-black">Related Halloween Books</h2>
+              <p className="mt-3 max-w-3xl leading-7 text-zinc-700">
+                More book pages from the same Halloween coloring library,
+                matched by nearby themes such as cute, cozy, ghost, pumpkin,
+                bold easy, fall, animal, food, witch, and manga.
+              </p>
+            </div>
 
             <Link
               href="/"

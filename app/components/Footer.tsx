@@ -8,6 +8,9 @@ export function Footer() {
           aria-label="Legal links"
           className="flex flex-wrap gap-x-5 gap-y-2 font-medium"
         >
+          <Link href="/about" className="hover:text-black">
+            About
+          </Link>
           <Link href="/imprint" className="hover:text-black">
             Imprint
           </Link>
